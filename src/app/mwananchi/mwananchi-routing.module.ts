@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+/* Components to be Routed */
+import { MwananchiComponent } from './mwananchi/mwananchi.component';
+
+const routes: Routes = [
+   { path: '', component: MwananchiComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

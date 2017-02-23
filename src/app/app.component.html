@@ -1,3 +1,9 @@
-<h1>
-  {{title}}
-</h1>
+<div>
+  <h1>{{title}}</h1>
+  <nav>
+    <a routerLink="karibu" routerLinkActive="active">Karibu</a>
+    <a routerLink="mwananchi"  routerLinkActive="active">Mwananchi</a>
+    <a routerLink="kiongozi"  routerLinkActive="active">Kiongozi</a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

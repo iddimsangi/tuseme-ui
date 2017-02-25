@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MwananchiRoutingModule } from './mwananchi-routing.module';
-import { AppComponent } from './app/app.component';
 import { MwananchiComponent } from './mwananchi/mwananchi.component';
 
 @NgModule({
@@ -9,6 +8,6 @@ import { MwananchiComponent } from './mwananchi/mwananchi.component';
     CommonModule,
     MwananchiRoutingModule
   ],
-  declarations: [AppComponent, MwananchiComponent]
+  declarations: [ MwananchiComponent]
 })
 export class MwananchiModule { }

@@ -3,9 +3,19 @@ import { Routes, RouterModule } from '@angular/router';
 
 /* Components to be Routed */
 import { MwananchiComponent } from './mwananchi/mwananchi.component';
+import { DuaHomeComponent } from './dua-home/dua-home.component';
+import { MapendekezoHomeComponent } from './mapendekezo-home/mapendekezo-home.component';
+import { TaarifaHomeComponent } from './taarifa-home/taarifa-home.component'
 
 const routes: Routes = [
-   { path: '', component: MwananchiComponent }
+   { path: '', component: MwananchiComponent,
+   children: [
+     { path: '',   redirectTo: 'taarifa', pathMatch: 'full' },
+     { path: 'taarifa', component: TaarifaHomeComponent },
+     { path: 'dua', component: DuaHomeComponent },
+     { path: 'mapendekezo', component: MapendekezoHomeComponent }
+   ]
+  }
 ];
 
 @NgModule({

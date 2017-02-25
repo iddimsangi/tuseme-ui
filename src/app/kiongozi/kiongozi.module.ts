@@ -9,9 +9,18 @@ import { TumaHomeComponent } from './tuma-home/tuma-home.component';
 import { MarejeshoHomeComponent } from './marejesho-home/marejesho-home.component';
 import { DuaHomeComponent } from './dua-home/dua-home.component';
 
+/* Inner modules feature modules of Kiongozi Feature Module */
+import { TumaModule } from './tuma/tuma.module';
+import { DuaModule } from './dua/dua.module';
+import { MarejeshoModule } from './marejesho/marejesho.module';
+
+
 @NgModule({
   imports: [
     CommonModule,
+    TumaModule,
+    DuaModule,
+    MarejeshoModule,
     KiongoziRoutingModule
   ],
   declarations: [ KiongoziComponent, TumaHomeComponent, MarejeshoHomeComponent, DuaHomeComponent],

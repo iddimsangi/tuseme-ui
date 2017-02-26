@@ -5,7 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { MwananchiComponent } from './mwananchi/mwananchi.component';
 import { DuaHomeComponent } from './dua-home/dua-home.component';
 import { MapendekezoHomeComponent } from './mapendekezo-home/mapendekezo-home.component';
-import { TaarifaHomeComponent } from './taarifa-home/taarifa-home.component'
+import { TaarifaHomeComponent } from './taarifa-home/taarifa-home.component';
+import { ReportHomeComponent } from './report-home/report-home.component';
 
 const routes: Routes = [
    { path: '', component: MwananchiComponent,
@@ -13,7 +14,8 @@ const routes: Routes = [
      { path: '',   redirectTo: 'taarifa', pathMatch: 'full' },
      { path: 'taarifa', component: TaarifaHomeComponent },
      { path: 'dua', component: DuaHomeComponent },
-     { path: 'mapendekezo', component: MapendekezoHomeComponent }
+     { path: 'mapendekezo', component: MapendekezoHomeComponent },
+     { path: 'ripoti', component: ReportHomeComponent }
    ]
   }
 ];

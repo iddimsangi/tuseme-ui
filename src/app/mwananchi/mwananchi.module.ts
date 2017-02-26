@@ -9,12 +9,17 @@ import { MwananchiComponent } from './mwananchi/mwananchi.component';
 import { TaarifaHomeComponent } from './taarifa-home/taarifa-home.component';
 import { DuaHomeComponent } from './dua-home/dua-home.component';
 import { MapendekezoHomeComponent } from './mapendekezo-home/mapendekezo-home.component';
+import { ReportHomeComponent } from './report-home/report-home.component';
+import { HeaderComponent } from './header/header.component';
+
 
 /* Inner modules feature modules for mwanchi feature module */
 import { TaarifaModule } from './taarifa/taarifa.module';
 import{ DuaModule } from './dua/dua.module';
 import { MapendekezoModule } from './mapendekezo/mapendekezo.module';
-import { HeaderComponent } from './header/header.component';
+
+import { RipotiModule } from './ripoti/ripoti.module';
+
 
 @NgModule({
   imports: [
@@ -22,8 +27,9 @@ import { HeaderComponent } from './header/header.component';
     TaarifaModule,
     DuaModule,
     MapendekezoModule,
+    RipotiModule,
     MwananchiRoutingModule
   ],
-  declarations: [ MwananchiComponent, TaarifaHomeComponent, DuaHomeComponent, MapendekezoHomeComponent, HeaderComponent]
+  declarations: [ MwananchiComponent, TaarifaHomeComponent, DuaHomeComponent, MapendekezoHomeComponent, HeaderComponent, ReportHomeComponent]
 })
 export class MwananchiModule { }

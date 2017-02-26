@@ -14,6 +14,7 @@ import { MapendekezoHomeComponent } from './mapendekezo-home/mapendekezo-home.co
 import { TaarifaModule } from './taarifa/taarifa.module';
 import{ DuaModule } from './dua/dua.module';
 import { MapendekezoModule } from './mapendekezo/mapendekezo.module';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   imports: [
@@ -23,6 +24,6 @@ import { MapendekezoModule } from './mapendekezo/mapendekezo.module';
     MapendekezoModule,
     MwananchiRoutingModule
   ],
-  declarations: [ MwananchiComponent, TaarifaHomeComponent, DuaHomeComponent, MapendekezoHomeComponent]
+  declarations: [ MwananchiComponent, TaarifaHomeComponent, DuaHomeComponent, MapendekezoHomeComponent, HeaderComponent]
 })
 export class MwananchiModule { }

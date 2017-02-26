@@ -1,4 +1,26 @@
+nav {
+       padding-top: 7px;
+   }
+   .navbar {
+       background-color: #4d4d4d;
+       letter-spacing: 4px;
+   }
 
+   .navbar-brand {
+       color: #ffffff !important;
+   }
+   .navbar-brand {
+       padding-top: 0px;
+       padding-left: 10px;
+       margin-bottom: 6px;
+   }
+
+       .Tlogo {
+       height: 58px;
+       width: 200px;
+       margin-top: 5px;
+       border-radius: 3px;
+   }
 
    .container ul li:hover {
        color: #ffffff !important;
@@ -25,25 +47,88 @@
        font-size: 32px;
        margin-top: 105px;
    }
-
    .pagetitle p {
        margin-bottom: 1px;
    }
-
    .pagetitle hr {
        margin-top: 1px;
    }
 
-   .options {
-       margin-top: 128px;
+   .petitions {
+       margin-top: 90px;
        width: 80%;
    }
 
+   .petitions h3 {
+       margin-bottom: 0px;
+   }
+
+   .date h3 {
+       margin-bottom: 0px;
+       margin-top: 0px;
+       letter-spacing: 4px;
+   }
+
+   .date h6{
+       margin-bottom: 1px;
+       margin-top: 1px;
+   }
+
+   .wadhifa {
+       color: dimgrey;
+       padding-left: 0px;
+   }
+
+   .lengo {
+       color: dimgrey;
+       padding-left: 0px;
+   }
+
+   #progressbar {
+       margin-top: 11px;
+       width: 100%;
+       background-color: #ffffff;
+       border-radius: 3px;
+   }
+
+   #barfill {
+       width: 0%;
+       height: 7px;
+       background-color: #820912;
+   }
+
+    #barfill1 {
+       width: 0%;
+       height: 7px;
+       background-color: #820912;
+   }
+
+   .maelezo {
+       border-left: thick solid burlywood;
+       border-bottom-left-radius: 3px;
+       padding-left: 6px;
+   }
    .row {
        margin-bottom: 26px;
+       margin-left: 0px;
    }
+
+     .default {
+       float: right;
+       clear: both;
+       margin-bottom: 2px;
+       font-size: 18px;
+       color: #ffffff;
+       width: 155px;
+       height: 40px;
+       padding-top: 6px;
+       margin-left: 300px;
+       background-image: url(/assets/images/send-button-strip-m.jpg);
+       background-repeat: repeat-x;
+       border-radius: 5px;
+   }
+
    .box {
-       width: 100%;
        background-image: url(/assets/images/icon-strip-m.jpg);
        background-repeat: repeat-x;
        color: #fff;
@@ -59,10 +144,12 @@
        color: black;
        margin-top: 4px;
    }
+
    .box h3 {
        margin-top: 0;
        margin-bottom: 20px;
    }
+
    .text {
        margin-top: 45px;
        padding-left: 19px;
@@ -73,10 +160,6 @@
 
    form {
        margin-left: 135px;
-   }
-
-   textarea {
-       overflow: hidden;
    }
 
    .textfield {
@@ -109,43 +192,6 @@
        border-radius: 5px;
    }
 
-   .options > h3{
-       margin-top: 50px;
-   }
-
-   .seethroughbox {
-       height: 110px;
-       width: 110px;
-       background-color: burlywood;
-       z-index: 100;
-       margin-left: -30px;
-       margin-top: -70px;
-       margin-bottom: -35px;
-   }
-
-   .date h3 {
-       margin-bottom: 0px;
-       margin-top: 0px;
-       letter-spacing: 4px;
-   }
-
-   .date h6{
-       margin-bottom: 1px;
-       margin-top: 2px;
-   }
-
-    .default {
-       float: right;
-       clear: both;
-       margin-bottom: 2px;
-   }
-
-   .mytext hr {
-       background-color: gainsboro;
-       height: 1px;
-       clear: both;
-   }
-
    .icone {
        height: 80px;
        width: 80px;
@@ -156,13 +202,12 @@
    hr {
        background-color: #820912;
        height: 2px;
-       margin-top: 7px;
-       z-index: 200;
+       margin-top: 5px;
    }
 
    .bgfooter{
        background-color: #ffffff;
-       margin-top: 17px;
+       margin-top: 0px;
    }
 
    .socioicion {

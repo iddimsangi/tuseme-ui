@@ -1,0 +1,22 @@
+
+    .bgfooter{
+        background-color: #ffffff;
+        margin-top: 17px;
+    }
+
+    .socioicion {
+        height: 45px;
+        margin-left: 105px;
+        margin-right: 120px;
+        margin-top: 40px;
+    }
+
+    footer p {
+        margin-top: 110px;
+        font-size: 11px;
+        color: #820912;
+    }
+
+    footer p a {
+        color: #820912;
+    }

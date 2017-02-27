@@ -19,6 +19,7 @@ import{ DuaModule } from './dua/dua.module';
 import { MapendekezoModule } from './mapendekezo/mapendekezo.module';
 
 import { RipotiModule } from './ripoti/ripoti.module';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -30,6 +31,6 @@ import { RipotiModule } from './ripoti/ripoti.module';
     RipotiModule,
     MwananchiRoutingModule
   ],
-  declarations: [ MwananchiComponent, TaarifaHomeComponent, DuaHomeComponent, MapendekezoHomeComponent, HeaderComponent, ReportHomeComponent]
+  declarations: [ MwananchiComponent, TaarifaHomeComponent, DuaHomeComponent, MapendekezoHomeComponent, HeaderComponent, ReportHomeComponent, FooterComponent]
 })
 export class MwananchiModule { }

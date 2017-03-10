@@ -1,9 +1,8 @@
-<div>
-  <h1>KIONGOZI MODULE</h1>
-  <nav>
-    <a routerLink="tuma" routerLinkActive="active">TUMA</a>
-    <a routerLink="marejesho"  routerLinkActive="active">MAREJESHO</a>
-    <a routerLink="dua"  routerLinkActive="active">DUA</a>
-  </nav>
-  <router-outlet></router-outlet>
+<div class="page1">
+  <kiongozi-header></kiongozi-header>
+  <div class="show">
+    <router-outlet></router-outlet>
+  </div>
+
+  <kiongozi-footer></kiongozi-footer>
 </div>

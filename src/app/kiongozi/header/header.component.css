@@ -1,0 +1,35 @@
+nav {
+  padding-top: 7px;
+}
+.navbar {
+  background-color: #4d4d4d;
+  letter-spacing: 4px;
+  height: 90px;
+}
+
+.navbar-brand {
+  padding-top: 0px;
+  padding-left: 10px;
+  margin-bottom: 6px;
+  color: #ffffff !important;
+}
+
+.Tlogo {
+  height: 58px;
+  width: 200px;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+.container ul li:hover {
+  color: #ffffff !important;
+  background-color: inherit!important;
+  border-bottom: 2px solid burlywood;
+  border-radius: 3px;
+  height: 40px;
+}
+
+.nav li {
+  margin-left: 30px;
+  margin-top: 10px;
+}

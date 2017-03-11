@@ -1,16 +1,4 @@
 
-.Tuma a.Tuma {
-  color: #ffffff !important;
-  border-bottom: 2px solid burlywood;
-  border-radius: 3px;
-  height: 40px;
-}
-
-.nav li {
-  margin-left: 30px;
-  margin-top: 10px;
-}
-
 .pagetitle {
   font-size: 32px;
   margin-top: 105px;
@@ -79,7 +67,7 @@
   height: 40px;
   padding-top: 6px;
   margin-left: 150px;
-  background-image: url(/assets/images/send-button-strip-m.jpg);
+  background-image: url(/asserts/images/send-button-strip-m.jpg);
   background-repeat: repeat-x;
   border-radius: 5px;
 }
@@ -156,7 +144,6 @@ form {
 }
 
 .check {
-  background-color: none;
   background: none;
   border: none;
 }
@@ -172,4 +159,3 @@ hr {
   height: 2px;
   margin-top: 5px;
 }
-

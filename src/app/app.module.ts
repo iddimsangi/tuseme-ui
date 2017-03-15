@@ -10,6 +10,9 @@ import { AppComponent } from './app.component';
 /* eagerly loaded feature module */
 import { KaribuModule } from './karibu/karibu.module';
 
+/* core module */
+import { CoreModule } from './core/core.module';
+
 /* Module that Routes feature modules */
 import { AppRoutingModule }   from './app-routing.module';
 
@@ -21,6 +24,7 @@ import { AppRoutingModule }   from './app-routing.module';
     BrowserModule,
     FormsModule,
     HttpModule,
+    CoreModule,
     KaribuModule,
     AppRoutingModule
   ],

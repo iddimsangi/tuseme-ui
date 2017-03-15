@@ -1,0 +1,20 @@
+
+.bgfooter{
+  background-color: #c4c8da;
+  margin-top: 17px;
+}
+
+.socioicion {
+  height: 45px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin-top: 110px;
+  font-size: 11px;
+  color: #820912;
+}
+
+footer p a {
+  color: #820912;
+}

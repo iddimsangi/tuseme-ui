@@ -23,7 +23,7 @@
 
    .container ul li:hover {
        color: #ffffff !important;
-       background-color:  !important;
+       background-color: inherit!important;
        border-bottom: 2px solid burlywood;
        border-radius: 3px;
        height: 40px;

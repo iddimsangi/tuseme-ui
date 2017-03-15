@@ -13,6 +13,8 @@ import { DuaHomeComponent } from './dua-home/dua-home.component';
 import { TumaModule } from './tuma/tuma.module';
 import { DuaModule } from './dua/dua.module';
 import { MarejeshoModule } from './marejesho/marejesho.module';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -23,6 +25,6 @@ import { MarejeshoModule } from './marejesho/marejesho.module';
     MarejeshoModule,
     KiongoziRoutingModule
   ],
-  declarations: [ KiongoziComponent, TumaHomeComponent, MarejeshoHomeComponent, DuaHomeComponent],
+  declarations: [ KiongoziComponent, TumaHomeComponent, MarejeshoHomeComponent, DuaHomeComponent, FooterComponent, HeaderComponent],
 })
 export class KiongoziModule { }

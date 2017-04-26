@@ -7,14 +7,21 @@ import {TumaMapendekezoComponent} from "./tuma-mapendekezo/tuma-mapendekezo.comp
 import {TumaUjumbeComponent} from "./tuma-ujumbe/tuma-ujumbe.component";
 import {TaarifaZilizotumwaComponent} from "./taarifa-zilizotumwa/taarifa-zilizotumwa.component";
 import {TaarifaHaririComponent} from "./taarifa-hariri/taarifa-hariri.component";
+import {AndikaTaarifaComponent} from "./andika-taarifa/andika-taarifa.component";
 
 const routes: Routes = [
   {path:'', component:ContentsComponent},
-  {path:'taarifa',component:TumaTaarifaComponent},
+  {path:'taarifa',component:TumaTaarifaComponent,
+  children:[
+    {path:'',redirectTo:'andika',pathMatch:'full'},
+    {path:'taarifa-zilizotumwa', component:TaarifaZilizotumwaComponent },
+    {path:'andika', component:AndikaTaarifaComponent}
+  ]
+  },
   {path:'ripoti',component:TumaRipotiComponent},
   {path:'mapendekezo',component:TumaMapendekezoComponent},
   {path:'ujumbe',component:TumaUjumbeComponent},
-  {path:'taarifa-zilizotumwa', component:TaarifaZilizotumwaComponent },
+
   {path:'taarifa-hariri', component:TaarifaHaririComponent}
 ];
 

@@ -8,13 +8,14 @@ import { TumaUjumbeComponent } from './tuma-ujumbe/tuma-ujumbe.component';
 import { TumaMapendekezoComponent } from './tuma-mapendekezo/tuma-mapendekezo.component';
 import { TaarifaZilizotumwaComponent } from './taarifa-zilizotumwa/taarifa-zilizotumwa.component';
 import { TaarifaHaririComponent } from './taarifa-hariri/taarifa-hariri.component';
+import { AndikaTaarifaComponent } from './andika-taarifa/andika-taarifa.component';
 
 @NgModule({
   imports: [
     CommonModule,
     TumaRoutingModule
   ],
-  declarations: [ContentsComponent, TumaTaarifaComponent, TumaRipotiComponent, TumaUjumbeComponent, TumaMapendekezoComponent, TaarifaZilizotumwaComponent, TaarifaHaririComponent],
+  declarations: [ContentsComponent, TumaTaarifaComponent, TumaRipotiComponent, TumaUjumbeComponent, TumaMapendekezoComponent, TaarifaZilizotumwaComponent, TaarifaHaririComponent, AndikaTaarifaComponent],
   exports: [ContentsComponent]
 })
 export class TumaModule { }

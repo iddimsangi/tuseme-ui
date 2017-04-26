@@ -10,9 +10,6 @@ import { MarejeshoHomeComponent } from './marejesho-home/marejesho-home.componen
 import { DuaHomeComponent } from './dua-home/dua-home.component';
 
 /* Inner modules feature modules of Kiongozi Feature Module */
-import { TumaModule } from './tuma/tuma.module';
-import { DuaModule } from './dua/dua.module';
-import { MarejeshoModule } from './marejesho/marejesho.module';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 
@@ -20,9 +17,6 @@ import { HeaderComponent } from './header/header.component';
 @NgModule({
   imports: [
     CommonModule,
-    TumaModule,
-    DuaModule,
-    MarejeshoModule,
     KiongoziRoutingModule
   ],
   declarations: [ KiongoziComponent, TumaHomeComponent, MarejeshoHomeComponent, DuaHomeComponent, FooterComponent, HeaderComponent],

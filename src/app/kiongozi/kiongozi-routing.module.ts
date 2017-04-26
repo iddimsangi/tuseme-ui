@@ -15,17 +15,9 @@ const routes: Routes = [
    { path: '', component: KiongoziComponent,
    children: [
      { path: '',   redirectTo: 'tuma', pathMatch: 'full' },
-     { path: 'tuma', component: TumaHomeComponent,
-
-     children:[
-       {path:'', component:ContentsComponent},
-       {path:'taarifa', component:TumaTaarifaComponent},
-       {path:'ripoti', component:TumaRipotiComponent},
-       {path:'mapendekezo', component:TumaMapendekezoComponent},
-     ]
-     },
-     { path: 'dua', component: DuaHomeComponent },
-     { path: 'marejesho', component: MarejeshoHomeComponent }
+     { path: 'tuma', loadChildren: './tuma/tuma.module#TumaModule'},
+     { path: 'dua', loadChildren:'./dua/dua.module#DuaModule' },
+     { path: 'marejesho', loadChildren:'./marejesho/marejesho.module#MarejeshoModule' }
    ]
   }
 ];

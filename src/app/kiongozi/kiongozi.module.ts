@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 /* routing module for Kiongozi feature module */
 import { KiongoziRoutingModule } from './kiongozi-routing.module';
+import { Angular2FontAwesomeModule } from 'angular2-font-awesome/angular2-font-awesome';
 
 /* components of kiongozi feature module */
 import { KiongoziComponent } from './kiongozi/kiongozi.component';
@@ -14,7 +15,8 @@ import { HeaderComponent } from './header/header.component';
 @NgModule({
   imports: [
     CommonModule,
-    KiongoziRoutingModule
+    KiongoziRoutingModule,
+    Angular2FontAwesomeModule
   ],
   declarations: [ KiongoziComponent, FooterComponent, HeaderComponent],
 })

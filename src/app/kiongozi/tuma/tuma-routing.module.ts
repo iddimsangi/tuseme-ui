@@ -19,8 +19,8 @@ const routes: Routes = [
   ]
   },
   {path:'ripoti',component:TumaRipotiComponent},
-  {path:'mapendekezo',component:TumaMapendekezoComponent},
-  {path:'ujumbe',component:TumaUjumbeComponent},
+  {path:'mapendekezo', loadChildren: './tuma-mapendekezo/tuma-mapendekezo.module#TumaMapendekezoModule'},
+  {path:'ujumbe', loadChildren: './tuma-ujumbe/tuma-ujumbe.module#TumaUjumbeModule'},
 
   {path:'taarifa-hariri', component:TaarifaHaririComponent}
 ];

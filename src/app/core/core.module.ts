@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 
 /* services for the application */
 import { TaarifaService } from './taarifa.service';
+import {AuthService} from "./auth.service";
 
 @NgModule({
   imports: [
     CommonModule
   ],
   declarations: [],
-  providers: [ TaarifaService ]
+  providers: [ TaarifaService,AuthService ]
 })
 export class CoreModule { }

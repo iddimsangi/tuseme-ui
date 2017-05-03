@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {TaarifaService} from "../../../core/taarifa.service";
-import {Taarifa} from "../../../shared/taarifa";
+import {Taarifa} from "../../../core/models/taarifa";
 
 @Component({
   selector: 'taarifa-contents',
@@ -17,9 +17,7 @@ export class ContentsComponent implements OnInit {
 
     this.taarifaService.getAllTaarifas().then(
       response => {
-
         this.taarifas = response;
-        console.log(response);
       });
 
   }

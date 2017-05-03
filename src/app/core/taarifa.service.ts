@@ -5,13 +5,13 @@ import {Headers, Http} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 /* importing class for Taarifa Objects */
-import {Taarifa} from '../shared/taarifa';
+import {Taarifa} from "./models/taarifa";
 
 
 @Injectable()
 export class TaarifaService {
 
-  private taarifaUrl = 'http://localhost:8000/api/v1/announcements';
+  private taarifaUrl = 'http://smartmtaaapi.ga/api/announcement';
 
 
   constructor(private http: Http) {
@@ -21,7 +21,7 @@ export class TaarifaService {
 
     return this.http.get(this.taarifaUrl)
       .toPromise()
-      .then(response => response.json().data as Taarifa[])
+      .then(response => response.json() as Taarifa[])
       .catch(this.handleError);
   }
 

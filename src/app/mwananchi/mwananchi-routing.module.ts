@@ -13,7 +13,7 @@ const routes: Routes = [
    children: [
      { path: '',   redirectTo: 'taarifa', pathMatch: 'full' },
      { path: 'taarifa', loadChildren: './taarifa/taarifa.module#TaarifaModule' },
-     { path: 'dua', loadChildren:'./dua/dua-mwananchi.module#DuaModule' },
+     { path: 'dua', loadChildren:'./malalamiko/malalamiko.module#MalalamikoModule' },
      { path: 'mapendekezo', loadChildren: './mapendekezo/mapendekezo.module#MapendekezoModule' },
      { path: 'ripoti', loadChildren: './ripoti/ripoti.module#RipotiModule' }
    ]

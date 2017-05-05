@@ -1,33 +1,41 @@
-import {Injectable} from '@angular/core';
-
-/* modules and operators for http service */
-import {Headers, Http} from '@angular/http';
+import { Injectable } from '@angular/core';
+import {Headers, Http, RequestOptions, Response} from '@angular/http';
+import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-
-/* importing class for Taarifa Objects */
-import {Taarifa} from '../shared/taarifa';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/delay';
+import { Taarifa } from './models/kiongozi';
 
 
 @Injectable()
 export class TaarifaService {
 
-  private taarifaUrl = 'http://localhost:8000/api/v1/announcements';
-
-
+  private taarifaUrl: 'http://smartmtaaapi.ga/api/announcement';
+  private  headers = new Headers({'Content-Tpye': 'application/json'});
   constructor(private http: Http) {
   }
+ /*the method for posting taarifa
+ */
+ tumaTaarifa(data): Promise<Taarifa> {
+   return this.http
+  .post(this.taarifaUrl, JSON.stringify(data), {headers: this.headers})
+     .toPromise()
+     .then(res => res.json().data as Taarifa)
+     .catch(this.handleError);
+ }
+ /*here comes the method to get data*/
+ getTaarifa(): Promise<Taarifa[]> {
+   return this.http.get(this.taarifaUrl)
+     .toPromise()
+     .then(response => response.json().data as Taarifa[])
+     .catch(this.handleError);
+ }
 
-  getAllTaarifas(): Promise<Taarifa[]> {
-
-    return this.http.get(this.taarifaUrl)
-      .toPromise()
-      .then(response => response.json().data as Taarifa[])
-      .catch(this.handleError);
-  }
-
-  private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error); // for demo purposes only
+  private  handleError (error: any): Promise<any> {
+    console.error('An error occurred', error);
     return Promise.reject(error.message || error);
   }
 
 }
+

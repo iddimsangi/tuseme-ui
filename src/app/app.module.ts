@@ -14,7 +14,8 @@ import { KaribuModule } from './karibu/karibu.module';
 import { CoreModule } from './core/core.module';
 
 /* Module that Routes feature modules */
-import { AppRoutingModule }   from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
+import {TaarifaService} from './core/taarifa.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { AppRoutingModule }   from './app-routing.module';
     KaribuModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TaarifaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

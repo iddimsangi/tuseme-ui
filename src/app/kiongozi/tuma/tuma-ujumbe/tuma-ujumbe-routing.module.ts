@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {UjumbeHomeComponent} from "./ujumbe-home/ujumbe-home.component";
-import {AndikaUjumbeComponent} from "./andika-ujumbe/andika-ujumbe.component";
-import {UjumbeUliotumwaComponent} from "./ujumbe-uliotumwa/ujumbe-uliotumwa.component";
+import {UjumbeHomeComponent} from './ujumbe-home/ujumbe-home.component';
+import {AndikaUjumbeComponent} from './andika-ujumbe/andika-ujumbe.component';
+import {UjumbeUliotumwaComponent} from './ujumbe-uliotumwa/ujumbe-uliotumwa.component';
 
 const routes: Routes = [
   {path: '', component: UjumbeHomeComponent,

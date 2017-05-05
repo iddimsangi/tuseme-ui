@@ -59,6 +59,7 @@ nav {
 .box {
   background-color: cadetblue;
   color: #fff;
+  cursor: pointer;
   margin-left: 7.5px;
   margin-right: 7.5px;
   padding-top: 15px;

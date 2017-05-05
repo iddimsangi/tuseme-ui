@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AndikaTaarifaComponent } from './andika-taarifa.component';
+import { TaarifaHomeComponent } from './taarifa-home.component';
 
-describe('AndikaTaarifaComponent', () => {
-  let component: AndikaTaarifaComponent;
-  let fixture: ComponentFixture<AndikaTaarifaComponent>;
+describe('TaarifaHomeComponent', () => {
+  let component: TaarifaHomeComponent;
+  let fixture: ComponentFixture<TaarifaHomeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AndikaTaarifaComponent ]
+      declarations: [ TaarifaHomeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AndikaTaarifaComponent);
+    fixture = TestBed.createComponent(TaarifaHomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

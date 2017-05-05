@@ -1,0 +1,15 @@
+<div class="tarifa center">
+   <form id="contact"  (ngSubmit)="onSubmit()" #taarifa="ngForm">
+
+    <fieldset>
+      <input type="text" name="title" placeholder="Muhktasari wa tangazo" [(ngModel)]="taarifa.title">
+    </fieldset>
+    &emsp;
+    &emsp;
+    <fieldset>
+      <textarea name="description" placeholder="Maelezo kwa urefu.." tabindex="5" required {(ngModel)}="taarifa.description"></textarea>
+    </fieldset>
+    <p><button (click)="addTaarifa()" class="btn btn-success pull-right">Tuma</button></p>
+
+  </form>
+</div>

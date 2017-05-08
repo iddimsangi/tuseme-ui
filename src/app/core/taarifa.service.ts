@@ -1,43 +1,27 @@
 import { Injectable } from '@angular/core';
-import {Headers, Http, RequestOptions, Response} from '@angular/http';
-import 'rxjs/add/operator/map';
+import {Http,Headers} from "@angular/http";
+import {Taarifa} from "./models/taarifa";
 import 'rxjs/add/operator/toPromise';
-import 'rxjs/add/observable/of';
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/delay';
-import { Taarifa } from './models/kiongozi';
-
 
 
 @Injectable()
 export class TaarifaService {
 
-  private taarifaUrl: 'http://api.tuseme.co.tz/api/v1/announcements';
-  private  headers = new Headers({'Content-Tpye': 'application/json'});
-  constructor(private http: Http) {
+  private taarifaUrl = 'http://api.tuseme.co.tz/api/v1/announcements';
+  private header = new Headers({'Content-Type': 'application/json'})
+  constructor(private http: Http) { }
+
+  create(data ): Promise<Taarifa>{
+
+    return this.http.post(this.taarifaUrl,JSON.stringify(data),{headers: this.header})
+      .toPromise()
+      .then(res => res.json().data as Taarifa)
+      .catch(this.handleError);
   }
- /*the method for posting taarifa
- */
- tumaTaarifa(data): Promise<Taarifa> {
-   return this.http
-  .post(this.taarifaUrl, JSON.stringify(data), {headers: this.headers})
-     .toPromise()
-     .then(res => res.json().data as Taarifa)
-     .catch(this.handleError);
- }
- /*here comes the method to get data*/
- getTaarifa(): Promise<Taarifa[]> {
-   return this.http.get(this.taarifaUrl)
-     .toPromise()
-     .then(response => response.json().data as Taarifa[])
-     .catch(this.handleError);
- }
 
-  private  handleError (error: any): Promise<any> {
-    console.error('An error occurred', error);
-
-    return Promise.reject(error.message || error);
+  private handleError(error: any) :Promise<any>{
+    console.info('an error has occured');
+    return Promise.reject(error.messege || error)
   }
 
 }
-

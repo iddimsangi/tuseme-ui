@@ -20,6 +20,7 @@ import { MapendekezoModule } from './mapendekezo/mapendekezo.module';
 
 import { RipotiModule } from './ripoti/ripoti.module';
 import { FooterComponent } from './footer/footer.component';
+import { SideMenuComponent } from './side-menu/side-menu.component';
 
 
 @NgModule({
@@ -31,6 +32,6 @@ import { FooterComponent } from './footer/footer.component';
     RipotiModule,
     MwananchiRoutingModule
   ],
-  declarations: [ MwananchiComponent, TaarifaHomeComponent, DuaHomeComponent, MapendekezoHomeComponent, HeaderComponent, ReportHomeComponent, FooterComponent]
+  declarations: [ MwananchiComponent, TaarifaHomeComponent, DuaHomeComponent, MapendekezoHomeComponent, HeaderComponent, ReportHomeComponent, FooterComponent, SideMenuComponent]
 })
 export class MwananchiModule { }

@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {TaarifaService} from '../../../../core/taarifa.service';
-import {Taarifa} from '../../../../core/models/kiongozi';
-import {Router} from '@angular/router';
+import {TaarifaService} from "../../../../core/taarifa.service";
 
 @Component({
   selector: 'app-andika',
@@ -9,26 +7,23 @@ import {Router} from '@angular/router';
   styleUrls: ['./andika.component.css']
 })
 export class AndikaComponent implements OnInit {
-  submitted = false;
-  model: any = {
-    user_id: 2,
-    title: 'string',
-    description: 'string'
-  };
+model: any = {
+  "user_id": 2,
+  "title": "string",
+  "description": "string"
+};
 
-  constructor(private taarifaService: TaarifaService, private router: Router) { }
-  onSubmit() {
-    this.submitted = true;
+  constructor(private taarifaService:TaarifaService) { }
+
+  addTaarifa(){
+    this.taarifaService.create(this.model)
+      .then(res => {
+        console.log("the service works");
+        console.log(res);
+      });
   }
-  addTaarifa() {
-    console.log('function is called');
-    this.taarifaService.tumaTaarifa(this.model)
-      .then(
-        (res) => {
-          console.log('inside');
-        }
-      );
-  }
+
+
   ngOnInit() {
     this.addTaarifa();
   }

@@ -8,10 +8,11 @@ import 'rxjs/add/operator/delay';
 import { Taarifa } from './models/kiongozi';
 
 
+
 @Injectable()
 export class TaarifaService {
 
-  private taarifaUrl: 'http://smartmtaaapi.ga/api/announcement';
+  private taarifaUrl: 'http://api.tuseme.co.tz/api/v1/announcements';
   private  headers = new Headers({'Content-Tpye': 'application/json'});
   constructor(private http: Http) {
   }
@@ -34,6 +35,7 @@ export class TaarifaService {
 
   private  handleError (error: any): Promise<any> {
     console.error('An error occurred', error);
+
     return Promise.reject(error.message || error);
   }
 

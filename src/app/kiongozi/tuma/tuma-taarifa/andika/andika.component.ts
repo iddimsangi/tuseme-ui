@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TaarifaService} from '../../../../core/taarifa.service';
 import {Taarifa} from '../../../../core/models/kiongozi';
 import {Router} from '@angular/router';
@@ -8,23 +8,28 @@ import {Router} from '@angular/router';
   templateUrl: './andika.component.html',
   styleUrls: ['./andika.component.css']
 })
-export class AndikaComponent {
+export class AndikaComponent implements OnInit {
   submitted = false;
-  model: any ;
+  model: any = {
+    user_id: 2,
+    title: 'string',
+    description: 'string'
+  };
 
   constructor(private taarifaService: TaarifaService, private router: Router) { }
   onSubmit() {
     this.submitted = true;
   }
   addTaarifa() {
+    console.log('function is called');
     this.taarifaService.tumaTaarifa(this.model)
       .then(
         (res) => {
-          console.log('updated service works');
-          console.log(res);
-          // this.router.navigate(['../available']);
-          this.router.navigateByUrl('/taarifa/taarifa-zilizotumwa');
+          console.log('inside');
         }
       );
+  }
+  ngOnInit() {
+    this.addTaarifa();
   }
 }

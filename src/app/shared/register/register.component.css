@@ -1,0 +1,257 @@
+nav {
+  padding-top: 7px;
+}
+.navbar {
+  background-color: #4d4d4d;
+  letter-spacing: 4px;
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+}
+.navbar-brand {
+  padding-top: 0px;
+  padding-left: 10px;
+  margin-bottom: 6px;
+}
+
+.Tlogo {
+  height: 65px;
+  width: 240px;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+.modal fade {
+  height: 200px;
+  width: 200px;
+  margin-top: 150px;
+}
+
+.container ul li:hover {
+  color: #ffffff !important;
+  border-bottom: 2px solid burlywood;
+  border-radius: 3px;
+  height: 40px;
+}
+
+.Mwanzo a.Mwanzo {
+  color: #ffffff !important;
+  border-bottom: 2px solid burlywood;
+  border-radius: 3px;
+  height: 40px;}
+
+.nav li {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.showbox {
+  margin-top: 120px;
+  width: 62%;
+  padding-right: 0;
+  position: relative;
+  z-index: 0;
+  background-color: #6D6968;
+}
+
+.greendisplay {
+  width: 40%;
+  height: 395px;
+  background-color: rgba(0, 78, 73, 0.9);
+  padding-left: 30px;
+  padding-top: 35px;
+  padding-bottom: 0px;
+  margin-left: 0px;
+  position: relative;
+  float: right;
+}
+
+.carouselgreendisplay {
+  height: 99%;
+  margin-top: -35px;
+}
+
+.description {
+  width: 80%;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.description h3 {
+  color: burlywood;
+}
+
+.registerbutton {
+  color: burlywood;
+  margin-left: 60px;
+  margin-right: 20px;
+  border: none;
+  background: none;
+  position: relative;
+  z-index: 1000;
+}
+
+.description p {
+
+}
+
+.screens {
+  width: 96.9%;
+  height: 90%;
+  margin-top: 0px;
+  position: absolute;
+  z-index: -1;
+}
+
+.BDG {
+  margin-top: 35px;
+  margin-left: 27px;
+}
+
+.toclear {
+  clear: both;
+}
+
+.pagetitle {
+  font-size: 32px;
+  margin-top: 105px;
+}
+
+.pagetitle p {
+  margin-bottom: 1px;
+}
+
+.pagetitle hr {
+  margin-top: 1px;
+}
+
+.options {
+  margin-top: 128px;
+  width: 80%;
+}
+
+.row {
+  margin-bottom: 26px;
+}
+
+.box {
+
+  background-repeat: repeat-x;
+  color: #fff;
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+  padding-top: 5px;
+  padding-bottom: 1px;
+  border-radius: 5px;
+}
+
+.box p {
+  font-size: 18px;
+  color: black;
+  margin-top: 4px;
+}
+
+.box h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.text {
+  margin-top: 45px;
+  padding-left: 19px;
+  text-align: left;
+  width: 70%;
+  border-left: thick solid burlywood;
+}
+
+form {
+  margin-left: 135px;
+}
+
+.textfield {
+  margin-bottom: 19px;
+  border-color: burlywood;
+  border-radius: 3px;
+}
+
+.textarea {
+  margin-bottom: 20px;
+  border-color: burlywood;
+  border-radius: 3px;
+}
+
+.idadi {
+  margin-left: 10px;
+  color: cadetblue;
+  border-radius: 2px;
+}
+
+.button {
+  font-size: 18px;
+  color: #ffffff;
+  width: 110px;
+  height: 40px;
+  padding-top: 6px;
+  margin-left: 300px;
+  background-repeat: repeat-x;
+  border-radius: 5px;
+}
+
+.icone {
+  height: 80px;
+  width: 80px;
+  font-size: 50px;
+  margin-bottom: 13px;
+}
+
+hr {
+  background-color: #820912;
+  height: 2px;
+  margin-top: 60px;
+}
+
+.bgfooter{
+  background-color: #ffffff;
+  margin-top: 17px;
+}
+.socioicion {
+  height: 45px;
+  margin-left: 105px;
+  margin-right: 120px;
+  margin-top: 40px;
+}
+
+footer .row {
+  margin-bottom: 0px;
+}
+
+footer p {
+  margin-top: 110px;
+  font-size: 11px;
+  color: #820912;
+}
+
+footer p a {
+  color: #820912;
+}
+
+.bgfooter{
+  background-color: #c4c8da;
+  margin-top: 17px;
+}
+
+.socioicion {
+  height: 45px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin-top: 110px;
+  font-size: 11px;
+  color: #820912;
+}
+
+footer p a {
+  color: #820912;
+}

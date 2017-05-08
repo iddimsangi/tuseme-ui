@@ -1,0 +1,46 @@
+ <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title"><br></h4>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <input class="form-control"  placeholder="Jina la kwanza" type="text" style=" border: 2px solid burlywood !important;"
+          [(ngModel)]="model.first_name" name="first_name"
+          >
+        </div>
+        <div class="form-group">
+          <input class="form-control"  placeholder="Jina la mzazi" type="text" style=" border: 2px solid burlywood !important;"
+                 [(ngModel)]="model.surname" name="surname"
+          >
+        </div>
+        <div class="form-group">
+          <input class="form-control"  placeholder="Namba ya mawasiliano" type="text"style=" border: 2px solid burlywood !important;"
+                 [(ngModel)]="model.phone_number" name="phone_number"
+          >
+        </div>
+        <div class="form-group">
+          <input class="form-control"  placeholder="barua pepe" type="text" style=" border: 2px solid burlywood !important;"
+                 [(ngModel)]="model.email" name="email"
+          >
+        </div>
+        <div class="form-group">
+          <input class="form-control"  placeholder="neno siri" type="text" style=" border: 2px solid burlywood !important;"
+                 [(ngModel)]="model.password" name="password"
+          >
+        </div>
+        <div class="form-group">
+          <input class="form-control"  placeholder="Rudia neno siri" type="text" style=" border: 2px solid burlywood !important;">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <a (click)="register()" class="btn">Sajili</a>
+        </button>
+
+
+      </div>
+    </div>
+  </div>

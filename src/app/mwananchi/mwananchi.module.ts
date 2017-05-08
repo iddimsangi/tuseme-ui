@@ -15,7 +15,7 @@ import { HeaderComponent } from './header/header.component';
 
 /* Inner modules feature modules for mwanchi feature module */
 import { TaarifaModule } from './taarifa/taarifa.module';
-import{ DuaModule } from './dua/dua.module';
+import{ DuaModule } from './dua/dua-mwananchi.module';
 import { MapendekezoModule } from './mapendekezo/mapendekezo.module';
 
 import { RipotiModule } from './ripoti/ripoti.module';

@@ -12,10 +12,10 @@ const routes: Routes = [
    { path: '', component: MwananchiComponent,
    children: [
      { path: '',   redirectTo: 'taarifa', pathMatch: 'full' },
-     { path: 'taarifa', component: TaarifaHomeComponent },
-     { path: 'dua', component: DuaHomeComponent },
-     { path: 'mapendekezo', component: MapendekezoHomeComponent },
-     { path: 'ripoti', component: ReportHomeComponent }
+     { path: 'taarifa', loadChildren: './taarifa/taarifa.module#TaarifaModule' },
+     { path: 'dua', loadChildren:'./malalamiko/malalamiko.module#MalalamikoModule' },
+     { path: 'mapendekezo', loadChildren: './mapendekezo/mapendekezo.module#MapendekezoModule' },
+     { path: 'ripoti', loadChildren: './ripoti/ripoti.module#RipotiModule' }
    ]
   }
 ];

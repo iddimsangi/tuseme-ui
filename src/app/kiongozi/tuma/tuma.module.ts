@@ -15,6 +15,7 @@ import {TumaMapendekezoComponent} from './tuma-mapendekezo/tuma-mapendekezo.comp
   declarations: [ContentsComponent,
   TumaTaarifaComponent, TumaRipotiComponent, TumaUjumbeComponent,
   TumaMapendekezoComponent],
+
   exports: [ContentsComponent]
 })
 export class TumaModule { }

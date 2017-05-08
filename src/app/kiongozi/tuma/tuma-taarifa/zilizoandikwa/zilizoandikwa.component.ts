@@ -26,6 +26,6 @@ export class ZilizoandikwaComponent implements OnInit {
       });
   }
   ngOnInit() {
-    this.getTaarifa();
+    /*this.getTaarifa();*/
   }
 }

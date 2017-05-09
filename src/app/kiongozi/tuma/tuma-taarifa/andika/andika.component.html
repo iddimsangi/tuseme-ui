@@ -2,12 +2,12 @@
    <form>
 
     <fieldset>
-      <input type="text" name="title" placeholder="Muhktasari wa tangazo" >
+      <input type="text" name="title" placeholder="Muhktasari wa tangazo" [(ngModel)]="model.title">
     </fieldset>
     &emsp;
     &emsp;
     <fieldset>
-      <textarea name="description" placeholder="Maelezo kwa urefu.." tabindex="5" required ></textarea>
+      <textarea name="description" placeholder="Maelezo kwa urefu.." tabindex="5" required  [(ngModel)]="model.description"></textarea>
     </fieldset>
     <p><button (click)="addTaarifa()" class="btn btn-success pull-right">Tuma</button></p>
 

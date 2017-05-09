@@ -8,9 +8,9 @@ import {TaarifaService} from "../../../../core/taarifa.service";
 })
 export class AndikaComponent implements OnInit {
 model: any = {
-  "user_id": 2,
-  "title": "string",
-  "description": "string"
+  user_id: 2,
+  title: "",
+  description: ""
 };
 
   constructor(private taarifaService:TaarifaService) { }
@@ -25,6 +25,6 @@ model: any = {
 
 
   ngOnInit() {
-    this.addTaarifa();
+
   }
 }

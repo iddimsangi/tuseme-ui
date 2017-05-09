@@ -1,12 +1,13 @@
 <div class="tarifa center">
-  <form id="contact" action="" method="post">
-    <input type="checkbox" name="vehicle" value="Bike">Ujumbe kwa wananchi wote<br/>
-
-    <input type="checkbox" name="vehicle" value="Bike">Ujumbe kwa (ma)kundi lengwa
+  <form >
+    <label for="category">Chagua kundi lakufikiwa na ujumbe {{model.category_id}}</label>
+    <select id="category" [(ngModel)]="model.category_id" name="category_id">
+      <option *ngFor="let category of ujumbeCategory" [ngValue]="category.id">{{category.category_name}}</option>
+    </select>
     <fieldset>
-      <textarea placeholder="Maelezo kwa urefu...." tabindex="5" required></textarea>
+      <textarea placeholder="Maelezo kwa urefu...." tabindex="5" required [(ngModel)]="model.body" name="body"></textarea>
     </fieldset>
-    <p><a href="#" class="btn btn-primary">Tuma ujumbe</a></p>
+    <p><a (click)="addUjumbe()" class="btn btn-primary">Tuma ujumbe</a></p>
 
   </form>
 </div>

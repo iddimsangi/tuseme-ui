@@ -1,0 +1,273 @@
+.btn-round {
+  background-color: #008080;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.tuma.row{
+  margin-top: 90px;
+}
+.ldr.col-sm-11.col-md-11.col-lg-11{
+  border-bottom: 2px solid #f25841;
+
+}
+.leader.col-sm-1.col-md-1.col-lg-1{
+  padding-left: 30px;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #F5F5DC;
+  resize: none;
+}
+
+fieldset input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #F5F5DC;
+}
+.tarifa.center {
+  margin: auto;
+  width: 70%;
+  border: 3px solid #F5F5DC;
+  padding: 70px;
+  background-color: #F5F5DC;
+  margin-top: 100px;
+
+}
+.pendekezo.btn-success{
+  float: right;
+  background-color:#008080;
+  margin-top: 2px;
+}
+.glyphicon.glyphicon-menu-left {
+  color:white;
+}
+
+
+nav {
+  padding-top: 7px;
+}
+.navbar {
+  background-color: #4d4d4d;
+  letter-spacing: 4px;
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+}
+.navbar-brand {
+  padding-top: 0px;
+  padding-left: 10px;
+  margin-bottom: 6px;
+}
+
+.Tlogo {
+  height: 58px;
+  width: 200px;
+  margin-top: 5px;
+}
+
+.container ul li:hover {
+  color: #ffffff !important;
+  border-bottom: 2px solid burlywood;
+  border-radius: 3px;
+  height: 40px;
+}
+
+.Tuma a.Tuma {
+  color: #ffffff !important;
+  border-bottom: 2px solid burlywood;
+  border-radius: 3px;
+  height: 40px;
+}
+
+.nav li {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.pagetitle {
+  font-size: 32px;
+  margin-top: 105px;
+}
+.pagetitle p {
+  margin-bottom: 1px;
+}
+.pagetitle hr {
+  margin-top: 1px;
+}
+
+.petitions {
+  margin-top: 90px;
+  width: 80%;
+}
+
+.petitions h3 {
+  margin-bottom: 0px;
+}
+
+.date h3 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  letter-spacing: 4px;
+}
+
+.date h6{
+  margin-bottom: 1px;
+  margin-top: 1px;
+}
+
+.wadhifa {
+  color: dimgrey;
+  padding-left: 0px;
+}
+
+.lengo {
+  color: dimgrey;
+  padding-left: 0px;
+}
+
+.maelezo {
+  border-left: thick solid burlywood;
+  border-bottom-left-radius: 3px;
+  padding-left: 6px;
+}
+.row {
+  margin-bottom: 4px;
+  margin-left: 0px;
+}
+
+.chaguzicontrolers {
+  margin-bottom: 0px;
+}
+
+.chaguzicontrolers h6 {
+  margin-left: 150px;
+  margin-top: 30px;
+}
+
+.default {
+  margin-bottom: 2px;
+  font-size: 18px;
+  color: #ffffff;
+  width: 125px;
+  height: 40px;
+  padding-top: 6px;
+  margin-left: 150px;
+  background-repeat: repeat-x;
+  border-radius: 5px;
+}
+
+.primary {
+  margin-top: 9px;
+  background: none;
+  color: cadetblue;
+  border: none;
+}
+
+.box {
+
+  background-repeat: repeat-x;
+  color: #fff;
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+  padding-top: 5px;
+  padding-bottom: 1px;
+  border-radius: 5px;
+}
+
+.box p {
+  font-size: 18px;
+  color: black;
+  margin-top: 4px;
+}
+
+.box h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.text {
+  margin-top: 45px;
+  padding-left: 19px;
+  text-align: left;
+  width: 70%;
+  border-left: thick solid burlywood;
+}
+
+form {
+  margin-left: 135px;
+}
+
+.textfield {
+  margin-bottom: 19px;
+  border-color: burlywood;
+  border-radius: 3px;
+}
+
+.textarea {
+  margin-bottom: 20px;
+  border-color: burlywood;
+  border-radius: 3px;
+}
+
+.idadi {
+  margin-left: 10px;
+  color: cadetblue;
+  border-radius: 2px;
+}
+
+
+
+.check {
+  background: none;
+  border: none;
+}
+.icone {
+  height: 80px;
+  width: 80px;
+  font-size: 50px;
+  margin-bottom: 13px;
+}
+
+hr {
+  background-color: #820912;
+  height: 2px;
+  margin-top: 5px;
+}
+
+.bgfooter{
+  background-color: #ffffff;
+  margin-top: 0px;
+}
+
+.socioicion {
+  height: 45px;
+  margin-left: 105px;
+  margin-right: 120px;
+  margin-top: 40px;
+}
+botton{
+  font-size: 14px;
+  color: white;
+
+  float:right;
+  height: 40px;
+  width:100px;
+  padding-top: 6px;
+  margin-left: 30px;
+  border-radius: 5px;
+  background-repeat: repeat-x;
+
+}

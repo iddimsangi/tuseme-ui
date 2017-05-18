@@ -10,8 +10,8 @@ import {Router} from "@angular/router";
 export class LoginComponent implements OnInit {
 
   model:any = {
-    "phone_number":"0154982047",
-    "password":"secret"
+    "phone_number":"",
+    "password":""
   };
 
   constructor(private authService:AuthService,private router:Router) { }
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
         res => {
           console.info("it works");
           console.info(res);
-          this.router.navigateByUrl('/mwananchi');
+          this.router.navigateByUrl('/mwananchi/taarifa');
         },
         error => {
           console.error(error);

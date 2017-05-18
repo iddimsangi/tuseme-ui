@@ -11,9 +11,10 @@ const routes: Routes = [
       {path: '', redirectTo: 'andika', pathMatch: 'full'},
       {path: 'andika', component: AndikaRipotiComponent},
       {path: 'ripoti-zilizotumwa', component: RipotiZilizotumwaComponent},
-      {path: 'hariri-ripoti', component: HaririRipotiComponent}
+
     ]
-  }
+  },
+  {path: 'hariri-ripoti/:id', component: HaririRipotiComponent}
 ];
 
 @NgModule({

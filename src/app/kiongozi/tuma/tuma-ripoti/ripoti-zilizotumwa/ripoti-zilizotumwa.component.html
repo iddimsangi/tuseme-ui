@@ -1,15 +1,14 @@
 <div class="containermajor">
-  <div class="container petitions">
+  <div class="container petitions" *ngFor="let report of reports">
     <div class="seethroughbox"></div>
     <div class="row">
       <div class="col-sm-2 date">
-        <h6>28th January</h6><h3 style="letter-spacing: 6px;">2017</h3>
+        <h6>{{report.created_at}}</h6>
       </div>
       <div class="col-sm-9 mytext">
-        <p><strong>Tangazo la kufanyika kwa mkutano mkuu wa mtaa wa Mlalakua ukihusisha wananchi wote, kujadili ripoti ya mapao na matumizi ya mwaka wa bajeti uliopita na kuweka mikakati mipya.</strong></p>
+        <p><strong>{{report.title}}</strong></p>
 
-        <div class="maelezo"> Sed ut perspiciatis unde omnis iste orem ipsum, ectuer iscing elit. Sed ut perspiciatis perspiciatis unde omnis iste orem ipsum, ectuer iscing elit.omnis iste orem ipsum Sed ut perspiciatis unde omnis iste orem ipsum, ectuer iscing elit. Sed ut perspiciatis perspiciatis unde omnis iste orem ipsum, ectuer. ipsum, ectuer iscing elit. Sed ut perspiciatis perspiciatis unde omnis iste orem ipsum, ectuer iscing elit.omnis iste orem ipsum Sed ut perspiciatis unde omnis iste orem ipsum, ectuer iscing elit.ipsum, ectuer iscing elit. Sed ut perspiciatis perspiciatis unde omnis iste orem ipsum, ectuer iscing elit.omnis iste orem ipsum Sed ut perspiciatis unde omnis iste orem ipsum, ectuer iscing elit. orem ipsum, ectuer iscing elit.omnis iste orem ipsum Sed ut perspiciatis unde omnis iste orem ipsum, ectuer iscing elit. Sed ut perspiciatis perspiciatis...
-        </div>
+        <div class="maelezo">{{report.description}}</div>
 
         <br><br>
       </div>
@@ -25,7 +24,7 @@
         border-radius: 5px;
         background-image: url(assets/images/send-button-strip-m.jpg);
         background-repeat: repeat-x;
-        "  type="button" onclick="Maoni yako yametumwa">Ondoa</button>
+        "  type="button" (click)="deleteReport(report); $event.stopPropagation()">Ondoa</button>
 
 
       <button style="  font-size: 10px;
@@ -37,7 +36,7 @@
         border-radius: 5px;
         background-image: url(assets/images/send-button-strip-m.jpg);
         background-repeat: repeat-x;
-        "  type="button" >Rekebisha</button>
+        "  type="button"  [routerLink]="['/kiongozi/tuma/ripoti/hariri-ripoti',report.id]">Rekebisha</button>
 
 
     </div>

@@ -10,13 +10,13 @@ import {Router} from "@angular/router";
 export class RegisterComponent implements OnInit {
 
   model:any = {
-    "first_name":"Edgar",
-    "surname":"Mlowe",
-    "birth_day":"2007-02-24",
-    "phone_number":"0154982047",
-    "email":"edgg@example.com",
+    "first_name":"",
+    "surname":"",
+    "birth_day":"",
+    "phone_number":"",
+    "email":"",
     "role":"2",
-    "password":"secret",
+    "password":"",
     "kaya_id":"4"
   };
 
@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
         res => {
           console.info("it works");
           console.info(res);
-          this.router.navigateByUrl('/mwananchi');
+          this.router.navigateByUrl('/mwananchi/taarifa');
         },
         error => {
           console.error(error);

@@ -1,19 +1,20 @@
 
 <div class="tarifa center">
   <p>Orodha ya mapendekezo</p>
+  <div *ngFor="let mp of collectedData">{{mp}} </div>
   <form id="contact" action="" method="post">
-    <fieldset>
-      <input type="text" name="fname" placeholder="1.">
+    <fieldset *ngFor="let data of inputs; let i=index">
+      <label for="mapendekezo">{{i+1}}. and its value </label>
+      <input type="text" id="mapendekezo" name="fname" [(ngModel)]="data.body">
     </fieldset>
+    <div class="zaid">
+      <a (click)="addInputs()" class="pendekezo btn btn-success" >Zaidi</a>
+      <a (click)="removeInputs()" class="pendekezo btn btn-success" >Punguza</a>
+    </div>
+    <p></p>
     <fieldset>
-      <input type="text" name="fname" placeholder="2.">
-      <div class="zaid">
-        <a href="#pende.html" class="pendekezo btn btn-success" >Zaidi</a>
-      </div>
-    </fieldset>
-    <p>Mwisho wa kupokea maoni</p>
-    <fieldset>
-      <input type="text" name="fname" placeholder="Tarehe">
+      <label for="mwisho">Mwisho wa kupokea maoni</label>
+      <input type="date" id="mwisho" name="fname" placeholder="Tarehe">
     </fieldset>
     <p><a href="#" class=" pendekezo btn btn-success">chapa mapendekezo</a></p>
 

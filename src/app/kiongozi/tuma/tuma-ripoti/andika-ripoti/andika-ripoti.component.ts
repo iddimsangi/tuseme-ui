@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {ReportService} from '../../../../core/report.service';
 
 @Component({
   selector: 'app-andika-ripoti',
@@ -6,10 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./andika-ripoti.component.css']
 })
 export class AndikaRipotiComponent implements OnInit {
+  report:any ={
+    "title": "string",
+    "description": "string",
+    "user_id": 1
+  };
 
-  constructor() { }
+  constructor(private router:Router, private reportService: ReportService) { }
+
+  create(){
+    this.reportService.create(this.report)
+      .then(
+        res => {
+         this.router.navigateByUrl('/kiongozi/tuma/ripoti/ripoti-zilizotumwa');
+        }
+      );
+  }
 
   ngOnInit() {
+
   }
 
 }

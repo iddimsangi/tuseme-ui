@@ -1,0 +1,21 @@
+<div class="container options">
+
+  <form>
+    <label for="category">Chagua kundi la malalamiko yako </label>
+    <select id="category" class="textfield" [(ngModel)]="model.petition_category_id" name="category_id">
+      <option *ngFor="let category of petitionCategories" [ngValue]="category.id">{{category.name}}</option>
+    </select>
+    <br>
+    <textarea class="textfield" name="title" text=" Maelezo ya mada kwa ufupi" placeholder="     Maelezo ya mada kwa ufupi" cols="80" rows="1" [(ngModel)]="model.title"></textarea>
+    <br>
+    <textarea class="textfield" name="Mlengwa" placeholder="    Kinongozi Mlengwa" cols="80" rows="1"></textarea>
+    <br>
+    <textarea class="textarea" rows="3" cols="80"  placeholder="    Maelezo zaidi..." name="description" [(ngModel)]="model.description"></textarea>
+    <br>
+    <input type="radio" name="mass support" value="idadi"><em>  Nnahitaji uungwaji mkono kutoka kwa wananchi</em> <textarea class="idadi" name="Idadi" cols="10" rows="1">
+          Idadi
+      </textarea>
+
+    <button class="button" type="button" (click)="update()">Rekebisha Malalamiko</button>
+  </form>
+</div>

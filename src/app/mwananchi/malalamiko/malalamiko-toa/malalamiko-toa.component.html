@@ -1,70 +1,57 @@
 <div class="container options">
-  <div class="row">
-    <div class="col-sm-3 text-center">
-      <button class="box" type="button" name="afya">
-        <p><strong>Afya</strong></p>
-      </button>
-    </div>
-
-    <div class="col-sm-3 text-center">
-      <button class="box" type="button" name="shule">
-        <p><strong>Shule</strong></p>
-      </button>
-    </div>
-
-    <div class="col-sm-3 text-center">
-      <button class="box" type="button" name="miundo mbinu">
-        <p><strong>Miundo mbinu</strong></p>
-      </button>
-    </div>
-
-    <div class="col-sm-3 text-center">
-      <button class="box" type="button" name="makazi">
-        <p><strong>Makazi</strong></p>
-      </button>
-    </div>
-  </div>
-
-  <!-- first row ends here -->
-
-  <div class="row">
-    <div class="col-sm-3 text-center">
-      <button class="box" type="button" name="usafi">
-        <p><strong>Usafi</strong></p>
-      </button>
-    </div>
-
-    <div class="col-sm-3 text-center">
-      <button class="box" type="button" name="miradi">
-        <p><strong>Miradi</strong></p>
-      </button>
-    </div>
-
-    <div class="col-sm-3 text-center">
-      <button class="box" type="button" name="usalama">
-        <p><strong>Usalama</strong></p>
-      </button>
-    </div>
-
-    <div class="col-sm-3 text-center">
-      <button class="box" type="button" name="mengineyo">
-        <p><strong>Mengineyo</strong></p>
-      </button>
-    </div>
-  </div>
-  <!-- second row ends here -->
 
   <form>
-    <textarea class="textfield" name=" Maelezo ya mada kwa ufupi" text=" Maelezo ya mada kwa ufupi" placeholder="     Maelezo ya mada kwa ufupi" cols="80" rows="1"></textarea>
+    <label for="category">Chagua kundi la malalamiko yako </label>
+    <select id="category" class="textfield" [(ngModel)]="model.petition_category_id" name="category_id">
+      <option *ngFor="let category of petitionCategories" [ngValue]="category.id">{{category.name}}</option>
+    </select>
+    <br>
+    <textarea class="textfield" name="title" text=" Maelezo ya mada kwa ufupi" placeholder="     Maelezo ya mada kwa ufupi" cols="80" rows="1" [(ngModel)]="model.title"></textarea>
     <br>
     <textarea class="textfield" name="Mlengwa" placeholder="    Kinongozi Mlengwa" cols="80" rows="1"></textarea>
     <br>
-    <textarea class="textarea" rows="3" cols="80"  placeholder="    Maelezo zaidi..." ></textarea>
+    <textarea class="textarea" rows="3" cols="80"  placeholder="    Maelezo zaidi..." name="description" [(ngModel)]="model.description"></textarea>
     <br>
     <input type="radio" name="mass support" value="idadi"><em>  Nnahitaji uungwaji mkono kutoka kwa wananchi</em> <textarea class="idadi" name="Idadi" cols="10" rows="1">
           Idadi
       </textarea>
 
-    <button class="button" type="button" onclick="Maoni yako yametumwa">Tuma</button>
+    <button class="button" type="button" (click)="create()">Tuma Malalamiko</button>
   </form>
+
+  <div class="containermajor">
+    <div class="container petitions" *ngFor="let lalamiko of malalamiko">
+      <div >
+        <h3><strong>Afya</strong> Mlalakua</h3>
+        <hr>
+        <div class="seethroughbox"></div>
+        <div class="row">
+          <div class="col-sm-2 date">
+            <h6>{{lalamiko.created_at}}</h6>
+          </div>
+          <div class="col-sm-9 mytext">
+            <p>{{lalamiko.title}}</p>
+            <div class="row">
+              <div class="col-sm-4 wadhifa">Kwa: Mwenyekiti Mlalakua</div>
+              <div class="col-sm-4 lengo">Wananchi walio afiki: <span id="idadi">1200</span>/<span id="lengo">3000</span></div>
+              <div class="col-sm-4">
+                <div id="progressbar">
+                  <div id="barfill"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="maelezo">{{lalamiko.description}} ...
+            </div>
+
+            <br><br><br><br><br>
+            <br>
+            <button class="default" type="button" [routerLink]="['/mwananchi/dua/rekebisha',lalamiko.id]"> Rekebisha </button>
+            <button class="default" type="button" (click)="deleteLalamiko(lalamiko); $event.stopPropagation()" > Ondoa </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

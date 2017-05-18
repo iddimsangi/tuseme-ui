@@ -1,28 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import {Petition} from '../../../core/models/petition';
 import {PetitionCategory} from '../../../core/models/petition-category';
 import {PetitionCategoryService} from '../../../core/petition-category.service';
 import {PetitionService} from '../../../core/petition.service';
-import {Router} from '@angular/router';
-import {Petition} from '../../../core/models/petition';
+import {ActivatedRoute, Params, Router} from '@angular/router';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
-  selector: 'app-malalamiko-toa',
-  templateUrl: './malalamiko-toa.component.html',
-  styleUrls: ['./malalamiko-toa.component.css']
+  selector: 'app-malalamiko-hariri',
+  templateUrl: './malalamiko-hariri.component.html',
+  styleUrls: ['./malalamiko-hariri.component.css']
 })
-export class MalalamikoToaComponent implements OnInit {
+export class MalalamikoHaririComponent implements OnInit {
   malalamiko: Petition[];
-  model: any ={
-    user_id:1,
-    title:"",
-    description: "",
-    petition_category_id: 2
-  };
+  model: any ={};
   petitionCategories: PetitionCategory[];
   constructor(
     private petitionCategoryService: PetitionCategoryService,
     private petitionService: PetitionService,
-    private router: Router
+    private router: Router,
+    private route:ActivatedRoute
   ) { }
   getCategories(){
     this.petitionCategoryService.getCategories()
@@ -35,7 +32,7 @@ export class MalalamikoToaComponent implements OnInit {
       )
   }
 
-  create(){
+  update(){
     this.petitionService.create(this.model)
       .then(
         res => {
@@ -44,27 +41,16 @@ export class MalalamikoToaComponent implements OnInit {
       );
   }
 
-  getMalalamiko(){
-  this.petitionService.getMalalamiko()
-    .then(
-      res => {
-        this.malalamiko = res;
 
-      }
-    );
+
+  ngOnInit(){
+    this.getCategories()
+    this.route.params
+      .switchMap((params: Params) => this.petitionService.getLalamiko(+params['id']))
+      .subscribe(res => {
+        this.model = res;
+        console.log("It works");
+        console.log(this.model);
+      });
   }
-
-  deleteLalamiko(data:Petition):void {
-    this.petitionService.deleteLalamiko(data.id)
-      .then(() => {
-        this.malalamiko = this.malalamiko.filter(u => u !== data);
-        console.log("Ujumbe deleted successfully");
-      })
-  }
-
-  ngOnInit() {
-    this.getCategories();
-    this.getMalalamiko();
-  }
-
 }

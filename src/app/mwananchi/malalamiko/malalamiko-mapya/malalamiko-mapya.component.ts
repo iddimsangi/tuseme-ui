@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {PetitionService} from '../../../core/petition.service';
+import {Petition} from '../../../core/models/petition';
 
 @Component({
   selector: 'app-malalamiko-mapya',
@@ -6,10 +8,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./malalamiko-mapya.component.css']
 })
 export class MalalamikoMapyaComponent implements OnInit {
+malalamiko:Petition[];
 
-  constructor() { }
+  constructor(private petitionService: PetitionService) { }
+
+  getMalalamiko(){
+    this.petitionService.getMalalamiko()
+      .then(
+        res => {
+          this.malalamiko = res;
+          console.log('can get malalamiko');
+          console.log(res);
+        }
+      );
+  }
+
 
   ngOnInit() {
+    this.getMalalamiko();
   }
 
 }

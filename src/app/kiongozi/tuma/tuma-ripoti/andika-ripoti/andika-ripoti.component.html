@@ -1,14 +1,14 @@
 <div class="tarifa center">
   <form id="contact" >
     <fieldset>
-      <input type="text" name="fname" placeholder="Utangulizi wa ripoti" ng-model="data.introduction">
+      <input type="text" name="title" placeholder="Utangulizi wa ripoti" [(ngModel)]="report.title">
     </fieldset>
-    <input type="checkbox" name="vehicle" value="Bike" ng-model="data.introduction">Andika ripoti&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-    <input type="checkbox" name="vehicle" value="Bike" ng-model="data.introduction">pakia faili
+    <input type="checkbox" name="vehicle" value="Bike" >Andika ripoti&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <input type="checkbox" name="vehicle" value="Bike" >pakia faili
     <fieldset>
-      <textarea placeholder="Andika ripoti kamili...." tabindex="5" required ng-model="data.descriptions"></textarea>
+      <textarea placeholder="Andika ripoti kamili...." tabindex="5" required [(ngModel)]="report.description" name="description"></textarea>
     </fieldset>
-    <p><button type="submit" class="btn btn-success pull-right">chapa ripoti</button></p>
+    <p><button (click)="create()" class="btn btn-success pull-right">chapa ripoti</button></p>
 
   </form>
 </div>

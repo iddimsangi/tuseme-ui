@@ -9,8 +9,8 @@ import {ReportService} from '../../../../core/report.service';
 })
 export class AndikaRipotiComponent implements OnInit {
   report:any ={
-    "title": "string",
-    "description": "string",
+    "title": "",
+    "description": "",
     "user_id": 1
   };
 

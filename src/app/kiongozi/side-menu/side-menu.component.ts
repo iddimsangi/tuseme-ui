@@ -13,6 +13,7 @@ export class SideMenuComponent implements OnInit {
   logout(){
     this.router.navigateByUrl('/karibu');
   }
+
   ngOnInit() {
   }
 

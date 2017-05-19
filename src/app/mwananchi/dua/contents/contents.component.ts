@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PetitionCategory} from '../../../core/models/petition-category';
 
 @Component({
   selector: 'dua-contents',

@@ -22,7 +22,14 @@ export class LoginComponent implements OnInit {
         res => {
           console.info("it works");
           console.info(res);
-          this.router.navigateByUrl('/mwananchi/taarifa');
+            if(res[0].role === 2){
+              this.router.navigateByUrl('/kiongozi/tuma');
+            }
+            else if (res[0].role === 1){
+
+              this.router.navigateByUrl('/mwananchi/taarifa');
+            }
+
         },
         error => {
           console.error(error);

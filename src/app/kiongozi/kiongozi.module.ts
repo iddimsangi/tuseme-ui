@@ -10,6 +10,7 @@ import { KiongoziComponent } from './kiongozi/kiongozi.component';
 /* Inner modules feature modules of Kiongozi Feature Module */
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { SideMenuComponent } from './side-menu/side-menu.component';
 
 
 @NgModule({
@@ -18,6 +19,6 @@ import { HeaderComponent } from './header/header.component';
     KiongoziRoutingModule,
     Angular2FontAwesomeModule
   ],
-  declarations: [ KiongoziComponent, FooterComponent, HeaderComponent],
+  declarations: [ KiongoziComponent, FooterComponent, HeaderComponent, SideMenuComponent],
 })
 export class KiongoziModule { }

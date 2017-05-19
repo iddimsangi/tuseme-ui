@@ -7,14 +7,14 @@
     <h3><em>Mlalakua</em></h3>
     <hr>
     <div class="seethroughbox"></div>
-    <div class="row" *ngFor="let taarifa of taarifas">
+    <div class="row" *ngFor="let tangazo of matangazo">
       <div class="col-sm-2 date">
-        <h3>M/Kiti</h3><h6>{{taarifa.created_at}}</h6>
+        <h3>M/Kiti</h3><h6>{{tangazo.created_at}}</h6>
       </div>
       <div class="col-sm-9 mytext">
-        <p><strong>{{taarifa.title}}</strong></p>
+        <p><strong>Title</strong></p>
 
-        <div class="maelezo">{{taarifa.description}}</div>
+        <div class="maelezo">{{tangazo.body}}</div>
 
         <br><br><br>
         <br><br><br>

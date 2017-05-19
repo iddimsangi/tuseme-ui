@@ -16,15 +16,14 @@
      <h3><em>Mlalakua</em></h3>
    <hr>
    <div class="seethroughbox"></div>
-   <div class="row">
+   <div class="row" *ngFor="let report of reports">
      <div class="col-sm-2 date">
-       <h3>M/Kiti</h3><h6>28th January 2017</h6>
+       <h3>M/Kiti</h3><h6>{{report.created_at}}</h6>
      </div>
      <div class="col-sm-9 mytext">
-       <p>Uongozi wa serikali ya mtaa wa Mlalakua uongeze fungu lililo tengwa kwaajili ya ujenzi wa kliniki ya wakina mama wajawazito.</p>
+       <p>{{report.title}}</p>
 
-       <div class="maelezo"> Sed ut perspiciatis unde omnis iste orem ipsum, ectuer iscing elit. Sed ut perspiciatis perspiciatis unde omnis iste orem ipsum, ectuer iscing elit.omnis iste orem ipsum Sed ut perspiciatis unde omnis iste orem ipsum, ectuer iscing elit. Sed ut perspiciatis perspiciatis unde omnis iste orem ipsum, ectuer. ipsum, ectuer iscing elit. Sed ut perspiciatis perspiciatis unde omnis iste orem ipsum, ectuer iscing elit.omnis iste orem ipsum Sed ut perspiciatis unde omnis iste orem ipsum, ectuer iscing elit.ipsum, ectuer iscing elit. Sed ut perspiciatis perspiciatis unde omnis iste orem ipsum, ectuer iscing elit.omnis iste orem ipsum Sed ut perspiciatis unde omnis iste orem ipsum, ectuer iscing elit. orem ipsum, ectuer iscing elit.omnis iste orem ipsum Sed ut perspiciatis unde omnis iste orem ipsum, ectuer iscing elit. Sed ut perspiciatis perspiciatis...
-       </div>
+       <div class="maelezo">{{report.description}}</div>
 
        <br><br><br><br><br>
        <br>

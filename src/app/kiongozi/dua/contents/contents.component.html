@@ -1,30 +1,12 @@
 <div class="containermajor">
   <div class="container petitions">
-    <h3><span style=" font-weight: bold;">Mtendaji</span> Mlalakua  <span style="float:right;"><small style=" font-weight: bold;"> Maoni ya wananchi</small></span></h3>
+    <h3><span style=" font-weight: bold;">Mtendaji</span> Mlalakua  <span style="float:right;"><small style=" font-weight: bold;"> Malalamiko ya wananchi</small></span></h3>
     <hr>
     <div class="seethroughbox"></div>
 
     <!--bella start-->
-    <div class="container">
-      <div  class="col-sm-3 "><h4 style=" font-weight: bold;margin-left:30px;">
-        Afya
-      </h4>
-        <div style=" width:20px;
-    border: 60px solid bisque;
-    margin: 25px;"></div>
-      </div>
-      <div  class="col-sm-7 ">
-        <h4 >Ujenzi wa zahanati ya watoto utengewe fungu       maalumu katika bajeti ijayo ya serikali ya mtaa wetu</h4><hr>
-        <h6>Kwa: Afisa afya, Mwenyekiti</h6>
-        <h6>Kwa: Waliounga mkono: <span class="primary"> 8823</span></h6>
-      </div>
-      <div  class="col-sm-2 "><h4 style=" font-weight: bold;"></h4></div>
 
-    </div>
-    <br><br><br><br><br>
-
-
-    <div class="container">
+    <div class="container" *ngFor="let lalamiko of malalamiko">
       <div  class="col-sm-3 ">
         <h4 style=" font-weight: bold;margin-left:30px;">Elimu</h4>
         <div style=" width:20px;
@@ -32,12 +14,11 @@
     margin: 25px;"></div>
       </div>
       <div  class="col-sm-7 ">
-        <h4 >Kukosekana kwa huduma za maji shule ya msingi Amani kuna hatarisha afya za wanafunzi, hili lizingatiwe kwenye bajeti.</h4><hr>
+        <h4 >{{lalamiko.title}}</h4><hr>
+        <h6>{{lalamiko.description}}</h6>
         <h6>Kwa: Afisa afya, Mwenyekiti,<span class="primary">Mtendaji</span></h6>
         <h6>Kwa: Waliounga mkono:  <span class="primary">8823</span></h6>
       </div>
-      <div  class="col-sm-2 "><h4 style=" font-weight: bold;"></h4></div>
-
     </div>
   </div>
 </div>

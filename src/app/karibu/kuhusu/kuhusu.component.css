@@ -1,0 +1,48 @@
+.container-fluid
+{
+  background-color:#eee;
+  margin-left:50px;
+  margin-right: 50px;
+
+}
+.jumbotron
+{
+  background-color: maroon;
+  padding: 10px;
+  margin: 2px;
+}
+
+.jumbotron h1
+{
+  font-size: 30px;
+  color: black;
+  font-style: italic;
+}
+.jumbotron img
+{
+  height: 45px;
+  width: 98px;
+}
+
+#letfphoto {
+  float: left;
+}
+
+#rightphoto {
+  float: right;
+}
+
+#img2
+{
+  width: 400px;
+  height: 250px;
+  float: left;
+
+
+}
+
+
+.Paragraph p
+{
+  font-style: italic;
+}

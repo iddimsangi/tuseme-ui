@@ -1,0 +1,31 @@
+
+<header id="header" xmlns="http://www.w3.org/1999/html">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" (click)="toggleState()" style="background-color: inherit">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+
+        <a class="navbar-brand" ></a></div>
+      <div class="collapse navbar-collapse" [ngClass]="{ 'in': isIn }">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a routerLink="/karibu" routerLinkActive="active">MWANZO</a></li>
+            <li><a routerLink="/karibu/kuhusu" routerLinkActive="active">KUHUSU SMARTMTAA</a></li>
+            <li><a routerLink="/karibu/mwanzo/ingia" routerLinkActive="active">INGIA</a></li>
+          <li class="dropdown"><a  data-toggle="dropdown">JISAJILI<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a routerLink="/karibu/mwanzo/jisajili-kiongozi" routerLinkActive="active">KIONGOZI</a></li>
+              <li><a routerLink="/karibu/mwanzo/jisajili-mwananchi" routerLinkActive="active">MWANANCHI</a></li>
+            </ul>
+          </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+

@@ -6,6 +6,8 @@ import { KaribuFooterComponent } from './karibu-footer/karibu-footer.component';
 import { Angular2FontAwesomeModule } from 'angular2-font-awesome/angular2-font-awesome';
 import {SharedModule} from "../shared/shared.module";
 import {FormsModule} from "@angular/forms";
+import { MwanzoComponent } from './mwanzo/mwanzo.component';
+import { KuhusuComponent } from './kuhusu/kuhusu.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,6 @@ import {FormsModule} from "@angular/forms";
     KaribuRoutingModule
 
   ],
-  declarations: [AppComponent, KaribuFooterComponent]
+  declarations: [AppComponent, KaribuFooterComponent, MwanzoComponent, KuhusuComponent]
 })
 export class KaribuModule { }

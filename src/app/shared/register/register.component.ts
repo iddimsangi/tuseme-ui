@@ -10,14 +10,14 @@ import {Router} from "@angular/router";
 export class RegisterComponent implements OnInit {
 
   model:any = {
-    "first_name":"",
-    "surname":"",
-    "birth_day":"",
-    "phone_number":"",
-    "email":"",
-    "role":"1",
-    "password":"",
-    "kaya_id":"4"
+    "first_name": "",
+    "surname": "",
+    "birth_day": "",
+    "phone_number": "",
+    "email": "",
+    "role": "1",
+    "password": "",
+    "kaya_id": "4"
   };
 
   constructor(private authService:AuthService,private router:Router) { }

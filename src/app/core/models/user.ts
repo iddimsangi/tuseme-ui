@@ -3,6 +3,7 @@
  */
 
 export class User {
+  id:number;
   first_name:string;
   surname:string;
   phone_number:string;

@@ -8,6 +8,9 @@ import {UjumbeService} from "./ujumbe.service";
 import {ReportService} from './report.service';
 import {PetitionCategoryService} from './petition-category.service';
 import {PetitionService} from './petition.service';
+import {KayaService } from './kaya.service';
+import {PositionService} from './position.service';
+import {LeaderService} from './leader.service';
 
 @NgModule({
   imports: [
@@ -21,7 +24,9 @@ import {PetitionService} from './petition.service';
     ReportService,
     PetitionService,
     PetitionCategoryService,
-
+    KayaService,
+    PositionService,
+    LeaderService
   ]
 })
 export class CoreModule { }

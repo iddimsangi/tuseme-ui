@@ -1,4 +1,4 @@
-
+<h5 >Tafadhali jaza fomu hii endapo wewe ni Mtendaji au Mwenyekiti wa mtaa flani</h5>
 <div class="form-group">
   <label for="first_name">Jina la kwanza</label>
   <input type="text" class="form-control" id="first_name"
@@ -12,21 +12,36 @@
          [(ngModel)]="model.surname" name="surname">
 </div>
 <div class="form-group">
-  <label for="phone_number">Namba ya simu</label>
+  <label for="phone_number">Namba ya sim</label>
   <input type="text"  class="form-control" id="phone_number"
          [(ngModel)]="model.phone_number" name="phone_number">
 </div>
 
 <div class="form-group">
-  <label for="email"> Barua pepe</label>
+  <label for="email">Barua pepe</label>
   <input type="text"  class="form-control" id="email"
          [(ngModel)]="model.email" name="email">
 </div>
 
 <div class="form-group">
-  <label for="cheo"> Cheo</label>
-  <input type="text"  class="form-control" id="cheo"
-         [(ngModel)]="cheo" name="cheo">
+  <label for="birth_day">Tarehe Ya Kuzaliwa</label>
+  <input type="date"  class="form-control" id="birth_day"
+         [(ngModel)]="model.birth_day" name="birth_day">
+</div>
+
+
+<div class="form-group">
+  <label for="birth_day">Chagua Cheo chako </label>
+ <select [(ngModel)]="leader.position_id" name="position_id">
+   <option *ngFor="let position of positions" [ngValue]="position.id">{{position.position_name}}</option> 
+ </select>
+</div>
+
+<div class="form-group">
+  <label for="birth_day">Chagua Kaya Yako </label>
+ <select [(ngModel)]="model.kaya_id" name="kaya_id">
+   <option *ngFor="let kaya of kayas" [ngValue]="kaya.id">{{kaya.name}}</option> 
+ </select>
 </div>
 
 
@@ -42,5 +57,5 @@
 </div>
 
 <button type="button" class="btn btn-default" (click)="register()">Sajili</button>
-<h5 ><a (click)="ingia()">una akaunti tayari? bonyeza hapa kuingia</a></h5>
+<h5>je ushawahi jisajili smartmtaa?<a routerLink="/karibu/mwanzo/ingia"> bonyeza hapa kuingia</a></h5>
 

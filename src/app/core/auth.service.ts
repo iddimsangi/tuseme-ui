@@ -7,8 +7,8 @@ import {User} from "./models/user";
 @Injectable()
 export class AuthService {
 
-  private registerUrl = 'http://smartmtaaapi.ga/api/register';
-  private loginUrl = 'http://smartmtaaapi.ga/api/login';
+  private registerUrl = 'http://api.tuseme.co.tz/api/v1/users';
+  private loginUrl = 'http://api.tuseme.co.tz/api/v1/login';
   private headers = new Headers({'Content-Type': 'application/json'});
 
   constructor(private http:Http) { }
@@ -17,7 +17,7 @@ export class AuthService {
     return this.http
       .post(this.registerUrl, JSON.stringify(data), {headers: this.headers})
       .toPromise()
-      .then(res => res.json() as User )
+      .then(res => res.json().data as User )
       .catch(this.handleError);
   }
 
@@ -25,7 +25,7 @@ export class AuthService {
     return this.http
       .post(this.loginUrl, JSON.stringify(data), {headers: this.headers})
       .toPromise()
-      .then(res => res.json() as User )
+      .then(res => res.json().data as User )
       .catch(this.handleError);
   }
 

@@ -4,9 +4,13 @@
     <select id="category" [(ngModel)]="model.category_id" name="category_id">
       <option *ngFor="let category of ujumbeCategory" [ngValue]="category.id">{{category.category_name}}</option>
     </select>
+       <fieldset>
+      <textarea placeholder="Utangulizi...." tabindex="1" required [(ngModel)]="model.title" name="title"></textarea>
+    </fieldset>
     <fieldset>
       <textarea placeholder="Maelezo kwa urefu...." tabindex="5" required [(ngModel)]="model.body" name="body"></textarea>
     </fieldset>
+  
     <p><a (click)="addUjumbe()" class="btn btn-primary">Tuma ujumbe</a></p>
 
   </form>

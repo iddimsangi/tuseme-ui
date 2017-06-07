@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../../core/auth.service";
 import {Router} from "@angular/router";
+import {SessionService} from "../../core/session.service";
 
 @Component({
   selector: 'app-login',
@@ -9,19 +10,20 @@ import {Router} from "@angular/router";
 })
 export class LoginComponent implements OnInit {
 
-  model:any = {
-    "phone_number":"",
-    "password":""
+  model: any = {
+    "phone_number": '',
+    "password": ''
   };
   loading = false;
 
-  constructor(private authService:AuthService,private router:Router) { }
+  constructor(private authService: AuthService, private router: Router, private sessionService: SessionService
+) { }
 
-  login(){
+  login() {
     this.loading = true;
     this.authService.login(this.model)
-      .then(
-        res => {
+      .then(res => {this.sessionService.setCurrentUser(res);
+
           console.info("it works");
           console.info(res);
             if(res[0].role === 2){

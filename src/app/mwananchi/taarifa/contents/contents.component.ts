@@ -12,8 +12,8 @@ matangazo: Ujumbe[];
   constructor(private ujumbeService: UjumbeService) {
   }
 
-  getMatangazo(){
-    this.ujumbeService.getUjumbes()
+  getMatangazo(id:number){
+    this.ujumbeService.getStreetUjumbes(id)
       .then(
         res => {
           this.matangazo =res;
@@ -24,7 +24,7 @@ matangazo: Ujumbe[];
   }
 
   ngOnInit() {
-    this.getMatangazo();
+    this.getMatangazo(16);
   }
 
 }

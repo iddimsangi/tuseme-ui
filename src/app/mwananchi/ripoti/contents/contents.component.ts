@@ -11,8 +11,8 @@ export class ContentsComponent implements OnInit {
 reports: Report[];
   constructor(private ripotiservice: ReportService) { }
 
-  getReports(){
-    return this.ripotiservice.getReports()
+  getReports(id:number){
+    return this.ripotiservice.getStreetReports(id)
       .then(
         res=> {
           this.reports =res;
@@ -23,7 +23,7 @@ reports: Report[];
   }
 
   ngOnInit() {
-    this.getReports();
+    this.getReports(10);
   }
 
 }

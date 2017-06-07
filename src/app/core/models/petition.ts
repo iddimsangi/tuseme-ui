@@ -3,6 +3,7 @@ export class Petition {
   title: string;
   description: string;
   user_id: number;
+  street_id:number;
   petition_category_id: number;
   created_at: any;
 }

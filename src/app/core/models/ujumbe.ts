@@ -8,6 +8,7 @@ export class Ujumbe {
   title:string;
   body:string;
   user_id:number;
+  street_id:number;
   category_id:number;
   created_at?:any;
 

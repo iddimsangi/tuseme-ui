@@ -7,6 +7,7 @@ import 'rxjs/add/operator/toPromise'
 export class PetitionService {
 
   private petitionUrl = 'http://api.tuseme.co.tz/api/v1/petitions';
+  private streetPetitionUrl = 'http://api.tuseme.co.tz/api/v1/streetPetitions';
   private headers = new Headers({'Content-Type':'application/json'});
   constructor(private http: Http) { }
 
@@ -19,6 +20,14 @@ export class PetitionService {
 
   getMalalamiko(): Promise<Petition[]>{
     return this.http.get(this.petitionUrl)
+      .toPromise()
+      .then(res => res.json().data as Petition[])
+      .catch(this.handleError);
+  }
+
+    getStreetMalalamiko(id:number): Promise<Petition[]>{
+      const url = `${this.streetPetitionUrl}/${id}`
+    return this.http.get(url)
       .toPromise()
       .then(res => res.json().data as Petition[])
       .catch(this.handleError);

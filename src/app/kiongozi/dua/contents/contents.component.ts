@@ -10,8 +10,8 @@ import {Petition} from '../../../core/models/petition';
 export class ContentsComponent implements OnInit {
 malalamiko: Petition[]
   constructor(private petitonService: PetitionService) { }
-getMalalamiko(){
-    this.petitonService.getMalalamiko()
+getMalalamiko(id:number){
+    this.petitonService.getStreetMalalamiko(id)
       .then(
         res => {
           this.malalamiko = res;
@@ -19,7 +19,7 @@ getMalalamiko(){
       )
 }
   ngOnInit() {
-  this.getMalalamiko();
+  this.getMalalamiko(22);
   }
 
 }

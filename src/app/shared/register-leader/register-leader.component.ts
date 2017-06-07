@@ -16,6 +16,7 @@ import {Router } from '@angular/router';
 })
 export class RegisterLeaderComponent implements OnInit {
   kayas:Kaya[];
+  loading = false;
   leader:any = {
     user_id:"1",
     position_id:"1",
@@ -44,6 +45,7 @@ export class RegisterLeaderComponent implements OnInit {
   ) { }
 
  register(){
+    this.loading = true;
     this.authService.create(this.model)
       .then(
         res => {
@@ -52,10 +54,11 @@ export class RegisterLeaderComponent implements OnInit {
            console.log(res);
           console.log(res.id);
           this.createLeader();
-         
+
         },
         error => {
           console.error(error);
+          this.loading = false;
         }
       );
   }

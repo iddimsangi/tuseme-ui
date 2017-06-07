@@ -13,10 +13,12 @@ export class LoginComponent implements OnInit {
     "phone_number":"",
     "password":""
   };
+  loading = false;
 
   constructor(private authService:AuthService,private router:Router) { }
 
   login(){
+    this.loading = true;
     this.authService.login(this.model)
       .then(
         res => {
@@ -25,14 +27,14 @@ export class LoginComponent implements OnInit {
             if(res[0].role === 2){
               this.router.navigateByUrl('/kiongozi/tuma');
             }
-            else if (res[0].role === 1){
+            else if (res[0].role === 1) {
 
               this.router.navigateByUrl('/mwananchi/taarifa');
             }
-
         },
         error => {
           console.error(error);
+          this.loading = false;
         }
       );
   }

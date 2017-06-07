@@ -22,10 +22,11 @@ export class LoginComponent implements OnInit {
         res => {
           console.info("it works");
           console.info(res);
-            if(res[0].role === 2){
+
+            if(res.user.role === 2){
               this.router.navigateByUrl('/kiongozi/tuma');
             }
-            else if (res[0].role === 1){
+            else if (res.user.role === 1){
 
               this.router.navigateByUrl('/mwananchi/taarifa');
             }

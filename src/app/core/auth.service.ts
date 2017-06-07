@@ -21,11 +21,11 @@ export class AuthService {
       .catch(this.handleError);
   }
 
-  login(data): Promise<User> {
+  login(data): Promise<any> {
     return this.http
       .post(this.loginUrl, JSON.stringify(data), {headers: this.headers})
       .toPromise()
-      .then(res => res.json().data as User )
+      .then(res => res.json().data as any )
       .catch(this.handleError);
   }
 

@@ -11,6 +11,7 @@ import {Kaya} from '../../core/models/kaya';
 })
 export class RegisterComponent implements OnInit {
   kayas:Kaya[];
+  loading = false
 
   model:any = {
   "first_name": "",
@@ -27,6 +28,7 @@ export class RegisterComponent implements OnInit {
   constructor(private authService:AuthService,private router:Router,private kayaService:KayaService) { }
 
   register(){
+    this.loading = true;
     this.authService.create(this.model)
       .then(
         res => {
@@ -36,6 +38,7 @@ export class RegisterComponent implements OnInit {
         },
         error => {
           console.error(error);
+          this.loading = false;
         }
       );
   }

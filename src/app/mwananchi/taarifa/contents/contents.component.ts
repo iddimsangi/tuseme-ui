@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Ujumbe} from '../../../core/models/ujumbe';
 import {UjumbeService} from '../../../core/ujumbe.service';
+import {SessionService } from '../../../core/session.service';
 
 @Component({
   selector: 'taarifa-contents',
@@ -9,7 +10,7 @@ import {UjumbeService} from '../../../core/ujumbe.service';
 })
 export class ContentsComponent implements OnInit {
 matangazo: Ujumbe[];
-  constructor(private ujumbeService: UjumbeService) {
+  constructor(private ujumbeService: UjumbeService, private sessionService:SessionService) {
   }
 
   getMatangazo(id:number){
@@ -23,8 +24,13 @@ matangazo: Ujumbe[];
       )
   }
 
+  initialize(){
+    let data =this.sessionService.getCurrentUser() 
+this.getMatangazo(data.user.street_id);
+  }
+
   ngOnInit() {
-    this.getMatangazo(16);
+    
   }
 
 }

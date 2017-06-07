@@ -11,6 +11,7 @@ import {PetitionService} from './petition.service';
 import {KayaService } from './kaya.service';
 import {PositionService} from './position.service';
 import {LeaderService} from './leader.service';
+import { SessionService } from './session.service';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import {LeaderService} from './leader.service';
     PetitionCategoryService,
     KayaService,
     PositionService,
-    LeaderService
+    LeaderService,
+    SessionService
   ]
 })
 export class CoreModule { }

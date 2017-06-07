@@ -12,8 +12,8 @@ malalamiko:Petition[];
 
   constructor(private petitionService: PetitionService) { }
 
-  getMalalamiko(){
-    this.petitionService.getMalalamiko()
+  getMalalamiko(id:number){
+    this.petitionService.getCitizenMalalamiko(id)
       .then(
         res => {
           this.malalamiko = res;
@@ -25,7 +25,7 @@ malalamiko:Petition[];
 
 
   ngOnInit() {
-    this.getMalalamiko();
+    this.getMalalamiko(12);
   }
 
 }

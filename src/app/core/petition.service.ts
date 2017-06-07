@@ -8,6 +8,7 @@ export class PetitionService {
 
   private petitionUrl = 'http://api.tuseme.co.tz/api/v1/petitions';
   private streetPetitionUrl = 'http://api.tuseme.co.tz/api/v1/streetPetitions';
+  private citizenPetitionUrl = 'http://api.tuseme.co.tz/api/v1/citizenPetitions';
   private headers = new Headers({'Content-Type':'application/json'});
   constructor(private http: Http) { }
 
@@ -27,6 +28,14 @@ export class PetitionService {
 
     getStreetMalalamiko(id:number): Promise<Petition[]>{
       const url = `${this.streetPetitionUrl}/${id}`
+    return this.http.get(url)
+      .toPromise()
+      .then(res => res.json().data as Petition[])
+      .catch(this.handleError);
+  }
+
+  getCitizenMalalamiko(id:number): Promise<Petition[]>{
+      const url = `${this.citizenPetitionUrl}/${id}`
     return this.http.get(url)
       .toPromise()
       .then(res => res.json().data as Petition[])

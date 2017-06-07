@@ -13,8 +13,8 @@ export class UjumbeUliotumwaComponent implements OnInit {
   constructor(private ujumbeService:UjumbeService) { }
 
   /*gets ujumbe written by current user */
-  getUjumbes(){
-    this.ujumbeService.getUjumbes()
+  getUjumbes(id:number){
+    this.ujumbeService.getLeaderUjumbes(id)
       .then(
         res => {
           console.log("we can get ujumbes");
@@ -32,7 +32,7 @@ export class UjumbeUliotumwaComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getUjumbes();
+    this.getUjumbes(6);
   }
 
 }

@@ -11,6 +11,7 @@ export class UjumbeService {
   private ujumbeCategoryUrl = 'http://api.tuseme.co.tz/api/v1/ujumbeCategories';
   private ujumbeUrl = 'http://api.tuseme.co.tz/api/v1/ujumbes';
   private streetUjumbe = 'http://api.tuseme.co.tz/api/v1/streetUjumbes';
+  private leaderUjumbe = 'http://api.tuseme.co.tz/api/v1/leaderUjumbes';
 
   /*request headers*/
   private header = new Headers({'Content-Type': 'application/json'});
@@ -56,6 +57,15 @@ export class UjumbeService {
 
   getStreetUjumbes(id:number): Promise<Ujumbe[]> {
     const url =`${this.streetUjumbe}/${id}`;
+    return this.http.get(url)
+      .toPromise()
+      .then(res => res.json().data as Ujumbe[])
+      .catch(this.handleError)
+  }
+
+
+   getLeaderUjumbes(id:number): Promise<Ujumbe[]> {
+    const url =`${this.leaderUjumbe}/${id}`;
     return this.http.get(url)
       .toPromise()
       .then(res => res.json().data as Ujumbe[])

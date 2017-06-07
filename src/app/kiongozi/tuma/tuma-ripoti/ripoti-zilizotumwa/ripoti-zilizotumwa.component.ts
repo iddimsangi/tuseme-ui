@@ -11,8 +11,8 @@ export class RipotiZilizotumwaComponent implements OnInit {
   reports: Report[];
   constructor(private reportService: ReportService) { }
 
-  getReports(){
-    this.reportService.getReports()
+  getReports(id:number){
+    this.reportService.getLeaderReports(id)
       .then(
         res => {
           console.info('reports retrived successfully');
@@ -31,7 +31,7 @@ export class RipotiZilizotumwaComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getReports();
+    this.getReports(2);
   }
 
 }

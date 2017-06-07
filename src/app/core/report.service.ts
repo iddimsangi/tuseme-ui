@@ -8,6 +8,7 @@ export class ReportService {
 
   private reportUrl ='http://api.tuseme.co.tz/api/v1/reports';
   private streetReportUrl = 'http://api.tuseme.co.tz/api/v1/streetReports';
+  private leaderReportUrl = 'http://api.tuseme.co.tz/api/v1/leaderReports';
   private headers = new Headers({'Content-Type': 'application/json'});
   constructor(private http: Http) { }
 
@@ -27,6 +28,14 @@ export class ReportService {
 
     getStreetReports(id:number): Promise<Report[]>{
       const url = `${this.streetReportUrl}/${id}`
+    return this.http.get(url)
+      .toPromise()
+      .then(res=> res.json().data as Report[])
+      .catch(this.handleError);
+  }
+
+   getLeaderReports(id:number): Promise<Report[]>{
+      const url = `${this.leaderReportUrl}/${id}`
     return this.http.get(url)
       .toPromise()
       .then(res=> res.json().data as Report[])

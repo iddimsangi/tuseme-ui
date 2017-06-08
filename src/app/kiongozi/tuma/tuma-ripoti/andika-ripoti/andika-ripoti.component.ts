@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {ReportService} from '../../../../core/report.service';
+import { SessionService } from '../../../../core/session.service';
+import {User } from '../../../../core/models/user';
 
 @Component({
   selector: 'app-andika-ripoti',
@@ -11,12 +13,22 @@ export class AndikaRipotiComponent implements OnInit {
   report:any ={
     "title": "",
     "description": "",
-    "user_id": 1
+    "user_id": "",
+    "street_id":""
   };
 
-  constructor(private router:Router, private reportService: ReportService) { }
+  currentUser:any = this.sessionService.getCurrentUser();
+  user:User = this.currentUser.user;
+
+  constructor(
+    private router:Router,
+   private reportService: ReportService,
+   private sessionService: SessionService
+   ) { }
 
   create(){
+    this.report.user_id =this.user.id;
+    this.report.street_id=this.user.street_id;
     this.reportService.create(this.report)
       .then(
         res => {

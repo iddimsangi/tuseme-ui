@@ -41,6 +41,13 @@
 
 
 <div class="form-group">
+  <label for="birth_day">Chagua Mtaa Wako </label>
+ <select [(ngModel)]="model.street_id" name="street_id">
+   <option *ngFor="let street of streets" [ngValue]="street.id">{{street.name}}</option>
+ </select>
+</div>
+
+<div class="form-group">
   <label for="password"> Neno siri</label>
   <input type="password"  class="form-control" id="password"
          [(ngModel)]="model.password" name="password">

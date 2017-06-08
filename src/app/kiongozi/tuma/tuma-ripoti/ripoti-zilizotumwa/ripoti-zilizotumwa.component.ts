@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Report} from '../../../../core/models/report';
 import {ReportService} from '../../../../core/report.service';
+import { SessionService } from '../../../../core/session.service';
+import { User } from '../../../../core/models/user';
 
 @Component({
   selector: 'app-ripoti-zilizotumwa',
@@ -9,7 +11,9 @@ import {ReportService} from '../../../../core/report.service';
 })
 export class RipotiZilizotumwaComponent implements OnInit {
   reports: Report[];
-  constructor(private reportService: ReportService) { }
+  user:User = this.sessionService.getCurrentUser().user;
+
+  constructor(private reportService: ReportService, private sessionService:SessionService) { }
 
   getReports(id:number){
     this.reportService.getLeaderReports(id)
@@ -30,8 +34,9 @@ export class RipotiZilizotumwaComponent implements OnInit {
       })
   }
 
+
   ngOnInit() {
-    this.getReports(2);
+    this.getReports(this.user.id);
   }
 
 }

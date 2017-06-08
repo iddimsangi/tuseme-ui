@@ -4,6 +4,8 @@ import {PetitionCategoryService} from '../../../core/petition-category.service';
 import {PetitionService} from '../../../core/petition.service';
 import {Router} from '@angular/router';
 import {Petition} from '../../../core/models/petition';
+import { SessionService } from '../../../core/session.service';
+import { User } from '../../../core/models/user';
 
 @Component({
   selector: 'app-malalamiko-toa',
@@ -13,15 +15,20 @@ import {Petition} from '../../../core/models/petition';
 export class MalalamikoToaComponent implements OnInit {
   malalamiko: Petition[];
   model: any ={
-    user_id:1,
+    user_id:"",
     title:"",
+    street_id:"",
     description: "",
     petition_category_id: 2
   };
+
+  user:User = this.sessionService.getCurrentUser().user;
+
   petitionCategories: PetitionCategory[];
   constructor(
     private petitionCategoryService: PetitionCategoryService,
     private petitionService: PetitionService,
+     private sessionService:SessionService,
     private router: Router
   ) { }
   getCategories(){
@@ -36,6 +43,8 @@ export class MalalamikoToaComponent implements OnInit {
   }
 
   create(){
+    this.model.user_id = this.user.id;
+    this.model.street_id = this.user.street_id;
     this.petitionService.create(this.model)
       .then(
         res => {

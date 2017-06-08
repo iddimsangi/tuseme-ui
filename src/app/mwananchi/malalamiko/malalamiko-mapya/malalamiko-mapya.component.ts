@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {PetitionService} from '../../../core/petition.service';
 import {Petition} from '../../../core/models/petition';
+import { SessionService } from '../../../core/session.service';
+import { User } from '../../../core/models/user';
 
 @Component({
   selector: 'app-malalamiko-mapya',
@@ -9,8 +11,9 @@ import {Petition} from '../../../core/models/petition';
 })
 export class MalalamikoMapyaComponent implements OnInit {
 malalamiko:Petition[];
+ user:User = this.sessionService.getCurrentUser().user;
 
-  constructor(private petitionService: PetitionService) { }
+  constructor(private petitionService: PetitionService,private sessionService:SessionService) { }
 
   getMalalamiko(id:number){
     this.petitionService.getCitizenMalalamiko(id)
@@ -25,7 +28,7 @@ malalamiko:Petition[];
 
 
   ngOnInit() {
-    this.getMalalamiko(12);
+    this.getMalalamiko(this.user.id);
   }
 
 }

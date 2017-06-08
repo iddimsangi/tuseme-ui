@@ -12,6 +12,7 @@ import {KayaService } from './kaya.service';
 import {PositionService} from './position.service';
 import {LeaderService} from './leader.service';
 import { SessionService } from './session.service';
+import {StreetService } from './street.service';
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ import { SessionService } from './session.service';
     KayaService,
     PositionService,
     LeaderService,
-    SessionService
+    SessionService,
+    StreetService
   ]
 })
 export class CoreModule { }

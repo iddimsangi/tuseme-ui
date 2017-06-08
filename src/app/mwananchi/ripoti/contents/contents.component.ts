@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Report} from '../../../core/models/report';
 import {ReportService} from '../../../core/report.service';
+import { SessionService } from '../../../core/session.service';
+import { User } from '../../../core/models/user';
 
 @Component({
   selector: 'ripoti-contents',
@@ -9,7 +11,8 @@ import {ReportService} from '../../../core/report.service';
 })
 export class ContentsComponent implements OnInit {
 reports: Report[];
-  constructor(private ripotiservice: ReportService) { }
+user:User = this.sessionService.getCurrentUser().user;
+  constructor(private ripotiservice: ReportService,private sessionService:SessionService) { }
 
   getReports(id:number){
     return this.ripotiservice.getStreetReports(id)
@@ -23,7 +26,7 @@ reports: Report[];
   }
 
   ngOnInit() {
-    this.getReports(10);
+    this.getReports(this.user.street_id);
   }
 
 }

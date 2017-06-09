@@ -27,6 +27,8 @@ export class AndikaRipotiComponent implements OnInit {
    ) { }
 
   create(){
+    console.log('the user');
+    console.log(this.sessionService.getCurrentUser());
     this.report.user_id =this.user.id;
     this.report.street_id=this.user.street_id;
     this.reportService.create(this.report)

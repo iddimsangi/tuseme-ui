@@ -13,11 +13,11 @@ export class AuthService {
 
   constructor(private http:Http) { }
 
-  create(data): Promise<User> {
+  create(data): Promise<any> {
     return this.http
       .post(this.registerUrl, JSON.stringify(data), {headers: this.headers})
       .toPromise()
-      .then(res => res.json().data as User )
+      .then(res => res.json().data as any )
       .catch(this.handleError);
   }
 

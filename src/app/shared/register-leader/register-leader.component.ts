@@ -56,7 +56,11 @@ export class RegisterLeaderComponent implements OnInit {
     this.authService.create(this.model)
       .then(
         res => {
-          this.leader.user_id = res.id;
+          this.leader.user_id = res.user.id;
+          this.sessionService.setCurrentUser(res);
+            console.log('current user');
+          console.log(res);
+
           this.createLeader();
 
         },

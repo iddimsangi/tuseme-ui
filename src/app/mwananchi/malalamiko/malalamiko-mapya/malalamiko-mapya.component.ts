@@ -12,6 +12,7 @@ import { User } from '../../../core/models/user';
 export class MalalamikoMapyaComponent implements OnInit {
 malalamiko:Petition[];
  user:User = this.sessionService.getCurrentUser().user;
+ 
 
   constructor(private petitionService: PetitionService,private sessionService:SessionService) { }
 

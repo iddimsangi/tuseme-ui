@@ -23,9 +23,6 @@ export class LoginComponent implements OnInit {
     this.loading = true;
     this.authService.login(this.model)
       .then(res => {this.sessionService.setCurrentUser(res);
-
-          console.info("it works");
-          console.info(res);
           this.sessionService.setCurrentUser(res);
             if(res.user.role === 2){
               this.router.navigateByUrl('/kiongozi/tuma');

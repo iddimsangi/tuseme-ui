@@ -16,6 +16,7 @@ export class AndikaRipotiComponent implements OnInit {
     "user_id": "",
     "street_id":""
   };
+  loading = false;
 
   currentUser:any = this.sessionService.getCurrentUser();
   user:User = this.currentUser.user;
@@ -27,6 +28,7 @@ export class AndikaRipotiComponent implements OnInit {
    ) { }
 
   create(){
+    this.loading = true;
     console.log('the user');
     console.log(this.sessionService.getCurrentUser());
     this.report.user_id =this.user.id;

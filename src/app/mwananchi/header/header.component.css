@@ -13,13 +13,30 @@
        margin-bottom: 6px;
        color: #ffffff !important;
    }
+ .Tlogo{
+   border:4px  cadetblue  solid;
+   border-top-right-radius: 5px;
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+   height: 58px;
+   width: 220px;
+   margin-top: 5px;
+   position: absolute;
+   left: 60px;
+ }
 
-       .Tlogo {
-       height: 58px;
-       width: 200px;
-       margin-top: 5px;
-       border-radius: 3px;
-   }
+ .collapse.navbar.collapse{
+   background-color: grey;
+ }
+ #Tlogo h3{
+   color:  #ffffff;
+   font: normal 36px 'Cookie', cursive;
+   margin: 0;
+ }
+ #Tlogo h3 span{
+   color:  cadetblue;
+ }
 
    .container ul li:hover {
        color: #ffffff !important;

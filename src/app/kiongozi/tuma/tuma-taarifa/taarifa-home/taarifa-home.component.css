@@ -4,15 +4,28 @@
   height: 50px;
   border-radius: 50%;
 }
+.btn.btn-success{
+  background-color:#008080;
+  border-color:#008080 ;
+  color: white;
+
+}
 .tuma.row{
   margin-top: 90px;
 }
-.ldr.col-sm-11.col-md-11.col-lg-11{
-  border-bottom: 2px solid #f25841;
+
+.ldr.col-sm-12.col-md-11.col-lg-11{
+  border-bottom: 2px solid gray;
+  margin-top: 50px;
 
 }
-.leader.col-sm-1.col-md-1.col-lg-1{
+.col-lg-4.col-md-4.col-sm-12.col-xs-12{
+  margin-bottom: 10px;
+}
+.leader.col-sm-12.col-md-1.col-lg-1{
   padding-left: 30px;
+  margin-top: 50px;
+
 }
 
 textarea {

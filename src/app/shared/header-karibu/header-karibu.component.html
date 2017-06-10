@@ -11,13 +11,17 @@
         </button>
 
 
-        <div style=" margin-right: 20px;"></div><a class="navbar-brand" href="#"><img class="Tlogo" src="assets/img/goodLogo.PNG"> </a>
-     </div>
+        <!--<div class="Tlogo" style=" margin-right: 20px;"><h3 >Smart<span>Mtaa</span></h3>-->
+          <a class="navbar-brand" href="#">
+            <div id="Tlogo">
+              <h3 >Smart<span>Mtaa</span></h3>
+            </div>
+          </a>
+</div>
       <div class="collapse navbar-collapse" [ngClass]="{ 'in': isIn }">
         <ul class="nav navbar-nav navbar-right">
             <li><a routerLink="/karibu" routerLinkActive="active">MWANZO</a></li>
-            <li><a routerLink="/karibu/kuhusu" routerLinkActive="active">KUHUSU SMARTMTAA</a></li>
-            <li><a routerLink="/karibu/mwanzo/ingia" routerLinkActive="active">INGIA</a></li>
+            <li><a routerLink="/karibu/kuhusu" routerLinkActive="active">kuhusu smartmtaa</a></li>
           <li class="dropdown"><a  data-toggle="dropdown">JISAJILI<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a routerLink="/karibu/mwanzo/jisajili-kiongozi" routerLinkActive="active">KIONGOZI</a></li>

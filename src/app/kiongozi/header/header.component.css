@@ -6,6 +6,33 @@ nav {
   letter-spacing: 4px;
   height: 90px;
 }
+.nav.navbar-nav.navbar-right li{
+  color: white;
+  text-transform: uppercase;
+}
+#Tlogo{
+  border:4px  cadetblue solid;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 58px;
+  width: 220px;
+  margin-top: 5px;
+  position: absolute;
+  left: 55px;
+}
+.collapse.navbar.collapse{
+  background-color: grey;
+}
+#Tlogo h3{
+  color:  #ffffff;
+  font: normal 36px 'Cookie', cursive;
+  margin: 0;
+}
+#Tlogo h3 span{
+  color:  cadetblue;
+}
 
 .navbar-brand {
   padding-top: 0px;
@@ -14,12 +41,7 @@ nav {
   color: #ffffff !important;
 }
 
-.Tlogo {
-  height: 58px;
-  width: 200px;
-  margin-top: 5px;
-  border-radius: 3px;
-}
+
 
 .container ul li:hover {
   color: #ffffff !important;

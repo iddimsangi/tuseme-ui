@@ -2,10 +2,13 @@ import { Injectable } from '@angular/core';
 import {Http,Headers} from '@angular/http';
 import {Leader} from './models/leader';
 import 'rxjs/add/operator/toPromise';
+import {Url } from './models/url';
 
 @Injectable()
 export class LeaderService {
-private leaderUrl ='http://api.tuseme.co.tz/api/v1/leaders';
+
+url = new Url();
+private leaderUrl =`${this.url.onlineUrl}/${'leaders'}`;
 private headers = new Headers({'Content-Type':'application/json'});
   constructor(private http:Http) { }
 

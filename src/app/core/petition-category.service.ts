@@ -2,10 +2,12 @@ import { Injectable } from '@angular/core';
 import {PetitionCategory} from './models/petition-category';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/toPromise'
+import {Url } from './models/url';
 
 @Injectable()
 export class PetitionCategoryService {
-private categoryUrl = 'http://api.tuseme.co.tz/api/v1/petitionCategories';
+  url = new Url();
+private categoryUrl =`${this.url.onlineUrl}/${'petitionCategories'}`;
   constructor(private http:Http) { }
   getCategories():Promise<PetitionCategory[]>{
     return this.http.get(this.categoryUrl)

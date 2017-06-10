@@ -2,16 +2,16 @@ import { Injectable } from '@angular/core';
 import {Http,Headers} from "@angular/http";
 import {Ujumbe, UjumbeCategory} from "./models/ujumbe";
 import 'rxjs/add/operator/toPromise';
-
+import {Url} from './models/url';
 
 @Injectable()
 export class UjumbeService {
-
+url = new Url();
   /*reques urls*/
-  private ujumbeCategoryUrl = 'http://api.tuseme.co.tz/api/v1/ujumbeCategories';
-  private ujumbeUrl = 'http://api.tuseme.co.tz/api/v1/ujumbes';
-  private streetUjumbe = 'http://api.tuseme.co.tz/api/v1/streetUjumbes';
-  private leaderUjumbe = 'http://api.tuseme.co.tz/api/v1/leaderUjumbes';
+  private ujumbeCategoryUrl =`${this.url.onlineUrl}/${'ujumbeCategories'}`;
+  private ujumbeUrl =`${this.url.onlineUrl}/${'ujumbes'}`;
+  private streetUjumbe =`${this.url.onlineUrl}/${'streetUjumbes'}`;
+  private leaderUjumbe =`${this.url.onlineUrl}/${'leaderUjumbes'}`;
 
   /*request headers*/
   private header = new Headers({'Content-Type': 'application/json'});

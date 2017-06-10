@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import {Http,Headers} from '@angular/http';
 import {Petition} from './models/petition';
 import 'rxjs/add/operator/toPromise'
+import {Url} from './models/url';
 
 @Injectable()
 export class PetitionService {
-
-  private petitionUrl = 'http://api.tuseme.co.tz/api/v1/petitions';
-  private streetPetitionUrl = 'http://api.tuseme.co.tz/api/v1/streetPetitions';
-  private citizenPetitionUrl = 'http://api.tuseme.co.tz/api/v1/citizenPetitions';
+url = new Url();
+  private petitionUrl =`${this.url.onlineUrl}/${'petitions'}`;
+  private streetPetitionUrl =`${this.url.onlineUrl}/${'streetPetitions'}`;
+  private citizenPetitionUrl = `${this.url.onlineUrl}/${'citizenPetitions'}`;
   private headers = new Headers({'Content-Type':'application/json'});
   constructor(private http: Http) { }
 

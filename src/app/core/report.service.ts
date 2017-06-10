@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
 import {Headers, Http} from '@angular/http';
 import {Report} from './models/report';
+import { Url } from './models/url';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class ReportService {
+  url = new Url();
+  
 
-  private reportUrl ='http://api.tuseme.co.tz/api/v1/reports';
-  private streetReportUrl = 'http://api.tuseme.co.tz/api/v1/streetReports';
-  private leaderReportUrl = 'http://api.tuseme.co.tz/api/v1/leaderReports';
+  private reportUrl =`${this.url.onlineUrl}/${'reports'}`;
+  private streetReportUrl =`${this.url.onlineUrl}/${'streetReports'}` ;
+  private leaderReportUrl = `${this.url.onlineUrl}/${'leaderReports'}`;
   private headers = new Headers({'Content-Type': 'application/json'});
   constructor(private http: Http) { }
 

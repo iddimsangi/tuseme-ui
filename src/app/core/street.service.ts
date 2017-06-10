@@ -2,11 +2,12 @@ import { Injectable } from '@angular/core';
 import {Http } from '@angular/http';
 import {Street } from './models/street';
 import 'rxjs/add/operator/toPromise';
+import {Url} from './models/url';
 
 @Injectable()
 export class StreetService {
-
-private streetUrl = 'http://api.tuseme.co.tz/api/v1/streets';
+url = new Url();
+private streetUrl =`${this.url.onlineUrl}/${'streets'}`;
   constructor(private http:Http) { }
 
   getStreets():Promise<Street[]>{

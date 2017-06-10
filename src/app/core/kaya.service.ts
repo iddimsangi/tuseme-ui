@@ -2,11 +2,13 @@ import { Injectable } from '@angular/core';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import {Kaya} from './models/kaya';
+import {Url } from './models/url';
 
 @Injectable()
 export class KayaService {
+  url = new Url();
 
-  private kayaUrl= 'http://api.tuseme.co.tz/api/v1/kayas';
+  private kayaUrl=`${this.url.onlineUrl}/${'kayas'}`;
 
   constructor(private http:Http) { }
 

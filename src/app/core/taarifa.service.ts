@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import {Http,Headers} from "@angular/http";
 import {Taarifa} from "./models/taarifa";
 import 'rxjs/add/operator/toPromise';
+import {Url} from './models/url';
 
 
 @Injectable()
 export class TaarifaService {
-
-  private taarifaUrl = 'http://api.tuseme.co.tz/api/v1/announcements';
+url = new Url();
+  private taarifaUrl =`${this.url.onlineUrl}/${'announcements'}`;
   private header = new Headers({'Content-Type': 'application/json'})
   constructor(private http: Http) { }
 

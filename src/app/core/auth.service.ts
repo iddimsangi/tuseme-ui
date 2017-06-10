@@ -2,13 +2,16 @@ import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import {User} from "./models/user";
+import {Url } from './models/url';
 
 
 @Injectable()
 export class AuthService {
+  url = new Url();
 
-  private registerUrl = 'http://api.tuseme.co.tz/api/v1/users';
-  private loginUrl = 'http://api.tuseme.co.tz/api/v1/login';
+
+  private registerUrl = `${this.url.onlineUrl}/${'users'}`;
+  private loginUrl =`${this.url.onlineUrl}/${'login'}`;
   private headers = new Headers({'Content-Type': 'application/json'});
 
   constructor(private http:Http) { }

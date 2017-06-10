@@ -2,11 +2,12 @@ import { Injectable } from '@angular/core';
 import {Http } from '@angular/http';
 import {Position} from './models/position';
 import 'rxjs/add/operator/toPromise';
+import {Url } from './models/url';
 
 @Injectable()
 export class PositionService {
-
-private positionsUrl ='http://api.tuseme.co.tz/api/v1/positions';
+url = new Url();
+private positionsUrl =`${this.url.onlineUrl}/${'positions'}`;
 
   constructor(private http:Http) { }
 

@@ -1,10 +1,11 @@
-<div class="tarifa center">
-  <form id="contact" >
+<div class="tarifa center" >
+  <img id="image" *ngIf="loading" src="assets/images/5.gif" >
+  <form id="contact" *ngIf="!loading" >
     <fieldset>
       <input type="text" name="title" placeholder="Utangulizi wa ripoti" [(ngModel)]="report.title">
     </fieldset>
-    <input type="checkbox" name="vehicle" value="Bike" >Andika ripoti&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-    <input type="checkbox" name="vehicle" value="Bike" >pakia faili
+    <!--<input type="checkbox" name="vehicle" value="Bike" >Andika ripoti&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;-->
+    <!--<input type="checkbox" name="vehicle" value="Bike" >pakia faili-->
     <fieldset>
       <textarea placeholder="Andika ripoti kamili...." tabindex="5" required [(ngModel)]="report.description" name="description"></textarea>
     </fieldset>

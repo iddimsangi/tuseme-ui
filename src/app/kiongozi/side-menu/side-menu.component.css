@@ -28,8 +28,8 @@ a:hover
 {
   display: block;
   position: fixed;
-  top: 50px;
-  left: 50px;
+  top: 30px;
+  left: 10px;
 
   z-index: 1;
 

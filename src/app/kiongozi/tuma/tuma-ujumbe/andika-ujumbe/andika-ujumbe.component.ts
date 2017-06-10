@@ -20,6 +20,7 @@ export class AndikaUjumbeComponent implements OnInit {
      "street_id":"1",
     "category_id": 1
   };
+  loading = false;
 
   user:User = this.sessionService.getCurrentUser().user;
 
@@ -39,6 +40,7 @@ export class AndikaUjumbeComponent implements OnInit {
   }
 
   addUjumbe(){
+    this.loading = true;
     this.model.user_id = this.user.id;
     this.model.street_id = this.user.street_id;
 

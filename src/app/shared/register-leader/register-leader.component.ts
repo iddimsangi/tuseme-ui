@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../../core/auth.service';
 import {PositionService} from '../../core/position.service';
-import {LeaderService} from '../../core/leader.service';
 import {User} from '../../core/models/user';
 import {Position} from '../../core/models/position';
-import {Leader} from '../../core/models/leader';
 import {Router } from '@angular/router';
 import {KayaService } from "../../core/kaya.service";
 import {StreetService } from "../../core/street.service";
@@ -21,11 +19,6 @@ export class RegisterLeaderComponent implements OnInit {
   kayas:Kaya[];
   streets:Street[]
   loading = false;
-  leader:any = {
-    user_id:"1",
-    position_id:"1",
-    role:"1"
-  }
   positions:Position[];
 
   model:any = {
@@ -35,6 +28,7 @@ export class RegisterLeaderComponent implements OnInit {
   "email": "",
   "birth_day": "",
   "role": 2,
+  "position_id":"",
   "password": "",
   "kaya_id": "",
   "street_id":"",
@@ -46,7 +40,6 @@ export class RegisterLeaderComponent implements OnInit {
   private router:Router,
   private kayaService:KayaService,
   private positionService:PositionService,
-  private leaderService:LeaderService,
    private streetService:StreetService,
     private sessionService: SessionService
   ) { }
@@ -56,13 +49,8 @@ export class RegisterLeaderComponent implements OnInit {
     this.authService.create(this.model)
       .then(
         res => {
-          this.leader.user_id = res.user.id;
           this.sessionService.setCurrentUser(res);
-            console.log('current user');
-          console.log(res);
-
-          this.createLeader();
-
+          this.router.navigateByUrl('/kiongozi/tuma');
         },
         error => {
           console.error(error);
@@ -94,16 +82,6 @@ this.streetService.getStreets()
      });
 
    }
-
-createLeader(){
-   this.leaderService.create(this.leader)
-          .then(res=>{
-            console.log('leader created');
-            this.sessionService.setCurrentUser(res);
-             this.router.navigateByUrl('/kiongozi/tuma');
-          });
-}
-
 
   ngOnInit() {
     this.getKayas();

@@ -57,17 +57,13 @@ fieldset input[type=text], select {
   left: 600px;
 }
 @media(min-width:760px) {
-  .text-center {
+  .tarifa-center {
     position: fixed;
     top: 51px;
-    left: 5px;
-    margin-left: -225px;
+    /*left: 5px;*/
+    /*margin-left: -225px;*/
     border: none;
-    border-radius: 0;
-    overflow-y: auto;
-    bottom: 0;
-    overflow-x: hidden;
-    padding-bottom: 40px;
+
 
 
   }
@@ -81,10 +77,5 @@ fieldset input[type=text], select {
     margin-top: 4px;
 
   }
-  /*.side-nav li a:hover,*/
-  /*.side-nav li a:focus {*/
-    /*outline: none;*/
-    /*background-color: #c2c2a3;*/
 
-  /*}*/
 }

@@ -10,29 +10,29 @@ nav {
   color: white;
   text-transform: uppercase;
 }
-#Tlogo{
-  border:4px  cadetblue solid;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  height: 58px;
-  width: 220px;
-  margin-top: 5px;
-  position: absolute;
-  left: 55px;
+/*#Tlogo{*/
+  /*border:4px  cadetblue solid;*/
+  /*border-top-right-radius: 5px;*/
+  /*border-top-left-radius: 5px;*/
+  /*border-bottom-left-radius: 5px;*/
+  /*border-bottom-right-radius: 5px;*/
+  /*height: 58px;*/
+  /*width: 220px;*/
+  /*margin-top: 3px;*/
+  /*position: absolute;*/
+  /*left: 55px;*/
+/*}*/
+.collapse.navbar-collapse{
+  background-color: #4d4d4d;
 }
-.collapse.navbar.collapse{
-  background-color: grey;
-}
-#Tlogo h3{
-  color:  #ffffff;
-  font: normal 36px 'Cookie', cursive;
-  margin: 0;
-}
-#Tlogo h3 span{
-  color:  cadetblue;
-}
+/*#Tlogo h3{*/
+  /*color:  #ffffff;*/
+  /*font: normal 36px 'Cookie', cursive;*/
+  /*margin: 0;*/
+/*}*/
+/*#Tlogo h3 span{*/
+  /*color:  cadetblue;*/
+/*}*/
 
 .navbar-brand {
   padding-top: 0px;

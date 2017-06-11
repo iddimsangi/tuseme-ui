@@ -9,19 +9,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">
-        <div id="Tlogo">
-          <h3 >Smart<span>Mtaa</span></h3>
-        </div>
+      <a class="navbar-brand" href="#" >
+        <!--<h3 >Smart<span>Mtaa</span></h3>-->
+        <img src="assets/images/logosmart.png" style="width: 210px;  position: absolute;left: 60px; height: 60px;margin-top:7px">
       </a>
       <ul class="nav navbar-nav">
         <li class="navbar-text"><app-side-menu></app-side-menu></li>
-
       </ul>
     </div>
-    <div class="collapse navbar-collapse" style="background-color: #4d4d4d" [ngClass]="{ 'in': isIn }">
+    <div class="collapse navbar-collapse" [ngClass]="{ 'in': isIn }">
       <ul class="nav navbar-nav navbar-right">
-        <li><a routerLink="tuma" routerLinkActive="active">Tuma</a></li>
+        <li><a routerLink="tuma" routerLinkActive="active">TUMA</a></li>
         <!--<li><a routerLink="marejesho"  routerLinkActive="active">MAREJESHO</a></li>-->
         <li><a routerLink="dua"  routerLinkActive="active">Malalamiko</a></li>
       </ul>

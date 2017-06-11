@@ -57,17 +57,16 @@ fieldset input[type=text], select {
   left: 600px;
 }
 @media(min-width:760px) {
-  .text-center {
-    position: fixed;
+  .tarifa-center {
     top: 51px;
-    left: 5px;
-    margin-left: -225px;
+    /*left: 5px;*/
+    /*margin-left: -225px;*/
     border: none;
     border-radius: 0;
-    overflow-y: auto;
-    bottom: 0;
-    overflow-x: hidden;
-    padding-bottom: 40px;
+    /*overflow-y: auto;*/
+    /*bottom: 0;*/
+    /*overflow-x: hidden;*/
+    /*padding-bottom: 40px;*/
 
 
   }

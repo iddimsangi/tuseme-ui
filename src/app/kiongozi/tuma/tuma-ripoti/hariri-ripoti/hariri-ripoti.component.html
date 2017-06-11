@@ -1,15 +1,38 @@
-<div class="tarifa center" *ngIf="report">
-  <form>
+<!--<div class="tarifa center"  style="margin-top: 5em">-->
+ <!---->
+  <!--<form>-->
+    <!--<fieldset>-->
+      <!--<input type="text" name="title" placeholder="Muhktasari wa tangazo" [(ngModel)]="report.title">-->
+    <!--</fieldset>-->
+    <!--&emsp;-->
+    <!--&emsp;-->
+    <!--<fieldset>-->
+      <!--<textarea name="description" placeholder="Maelezo kwa urefu.." tabindex="5" required  [(ngModel)]="report.description"></textarea>-->
+    <!--</fieldset>-->
+    <!--<button (click)="update()"  class="btn btn-success pull-right">Rekebisha Ripoti</button>-->
 
+  <!--</form>-->
+<!--</div>-->
+<div class="tarifa center" *ngIf="report">
+  <div class="row">
+    <div class="col-sm-12 mytext">
+      <div class="maelezo">utangulizi: {{report.title}} </div>
+    </div>
+    <div class="col-sm-12 mytext">
+      <div class="maelezo">Ripoti: {{report.description}} </div>
+    </div>
+  </div>
+  <img id="image" *ngIf="loading" src="assets/images/5.gif" >
+  <form id="contact" *ngIf="!loading" >
     <fieldset>
       <input type="text" name="title" placeholder="Muhktasari wa tangazo" [(ngModel)]="report.title">
     </fieldset>
     &emsp;
-    &emsp;
+
     <fieldset>
       <textarea name="description" placeholder="Maelezo kwa urefu.." tabindex="5" required  [(ngModel)]="report.description"></textarea>
     </fieldset>
-    <p><button (click)="update()"  class="btn btn-success pull-right">Rekebisha Ripoti</button></p>
-
+    <p><button (click)="update()"  class="btn btn-success pull-right">Rekebisha Ripoti</button>
+    </p>
   </form>
 </div>

@@ -4,15 +4,28 @@
   height: 50px;
   border-radius: 50%;
 }
+.btn.btn-success{
+  background-color:#008080;
+  border-color:#008080 ;
+  color: white;
+
+
+}
 .tuma.row{
   margin-top: 90px;
 }
-.ldr.col-sm-11.col-md-11.col-lg-11{
-  border-bottom: 2px solid #f25841;
+.ldr.col-sm-12.col-md-11.col-lg-11{
+  border-bottom: 2px solid gray;
+  margin-top: 50px;
 
 }
-.leader.col-sm-1.col-md-1.col-lg-1{
+.col-lg-4.col-md-4.col-sm-12.col-xs-12{
+  margin-bottom: 10px;
+}
+.leader.col-sm-12.col-md-1.col-lg-1{
   padding-left: 30px;
+  margin-top: 50px;
+
 }
 
 textarea {
@@ -36,15 +49,7 @@ fieldset input[type=text], select {
   box-sizing: border-box;
   background-color: #F5F5DC;
 }
-.tarifa.center {
-  margin: auto;
-  width: 70%;
-  border: 3px solid #F5F5DC;
-  padding: 70px;
-  background-color: #F5F5DC;
-  margin-top: 100px;
 
-}
 .pendekezo.btn-success{
   float: right;
   background-color:#008080;
@@ -52,4 +57,36 @@ fieldset input[type=text], select {
 }
 .glyphicon.glyphicon-menu-left {
   color:white;
+}
+#image{
+  position: absolute;
+  left: 600px;
+}
+@media(min-width:760px) {
+  .tarifa.center {
+    top: 151px;
+    border: none;
+    border-radius: 0;
+    /*overflow-y: auto;*/
+    /*bottom: 0;*/
+    /*overflow-x: hidden;*/
+
+
+  }
+
+  .tarifa.center {
+    margin: auto;
+    width: 760px;
+    border: 3px solid #F5F5DC;
+    /*padding: 100px;*/
+    background-color: #F5F5DC;
+    /*margin-top:5em;*/
+
+  }
+  /*.side-nav li a:hover,*/
+  /*.side-nav li a:focus {*/
+  /*outline: none;*/
+  /*background-color: #c2c2a3;*/
+
+  /*}*/
 }

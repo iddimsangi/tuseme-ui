@@ -22,9 +22,10 @@ nav {
   /*position: absolute;*/
   /*left: 55px;*/
 /*}*/
-.collapse.navbar-collapse{
-  background-color: #4d4d4d;
-}
+.collapse.navbar-collapse {
+          background-color: #4d4d4d;
+        }
+
 /*#Tlogo h3{*/
   /*color:  #ffffff;*/
   /*font: normal 36px 'Cookie', cursive;*/

@@ -44,8 +44,6 @@ export class RegisterComponent implements OnInit {
     this.authService.create(this.model)
       .then(
         res => {
-          console.info("it works");
-          console.info(res);
           this.sessionService.setCurrentUser(res);
           this.router.navigateByUrl('/mwananchi/taarifa');
         },
@@ -60,8 +58,6 @@ export class RegisterComponent implements OnInit {
 this.kayaService.getKayas()
 .then(res=>{
   this.kayas = res;
-  console.info('kayas retrieved successfully');
-  console.info(res);
 });
   }
 
@@ -69,8 +65,6 @@ this.kayaService.getKayas()
 this.streetService.getStreets()
 .then(res=>{
   this.streets = res;
-  console.info('streets retrieved successfully');
-  console.info(res);
 });
   }
 

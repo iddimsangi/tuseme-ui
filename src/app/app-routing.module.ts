@@ -4,7 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 export const routes: Routes = [
   { path: '', redirectTo: 'karibu', pathMatch: 'full'},
    { path: 'kiongozi', loadChildren: 'app/kiongozi/kiongozi.module#KiongoziModule' },
-    { path: 'mwananchi', loadChildren: 'app/mwananchi/mwananchi.module#MwananchiModule' }
+    { path: 'mwananchi', loadChildren: 'app/mwananchi/mwananchi.module#MwananchiModule' },
+    {path: 'admin',loadChildren: 'app/admin/admin.module#AdminModule'}
 
 ];
 

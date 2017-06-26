@@ -11,6 +11,7 @@ export class Ujumbe {
   street_id:number;
   category_id:number;
   created_at?:any;
+  position_name:string;
 
 }
 

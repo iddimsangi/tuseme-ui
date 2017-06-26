@@ -32,7 +32,7 @@
 
 <div class="form-group">
   <label for="birth_day">Chagua Cheo chako </label>
- <select [(ngModel)]="leader.position_id" name="position_id">
+ <select [(ngModel)]="model.position_id" name="position_id">
    <option *ngFor="let position of positions" [ngValue]="position.id">{{position.position_name}}</option>
  </select>
 </div>

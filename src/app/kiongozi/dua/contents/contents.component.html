@@ -1,12 +1,15 @@
 <div class="containermajor">
-  <div class="container petitions">
-    <h3><span style=" font-weight: bold;">Mtendaji</span> Mlalakua  <span style="float:right;"><small style=" font-weight: bold;"> Malalamiko ya wananchi</small></span></h3>
-    <hr>
+
+       <div class="container petitions">
+         <div class="">
+    <h4><span style=" font-weight: bold;">{{position.position_name}}</span> Mtaa wa{{street.name}}  <span style="float:right;"><small style=" font-weight: bold;"> Malalamiko ya wananchi</small></span></h4>
+           <hr>
+         </div>
     <div class="seethroughbox"></div>
 
     <!--bella start-->
 
-    <div class="container" *ngFor="let lalamiko of malalamiko">
+    <div class="container" *ngFor="let petition of malalamiko">
       <div  class="col-sm-3 ">
         <h4 style=" font-weight: bold;margin-left:30px;">Elimu</h4>
         <div style=" width:20px;
@@ -14,10 +17,10 @@
     margin: 25px;"></div>
       </div>
       <div  class="col-sm-7 ">
-        <h4 >{{lalamiko.title}}</h4><hr>
-        <h6>{{lalamiko.description}}</h6>
-        <h6>Kwa: Afisa afya, Mwenyekiti,<span class="primary">Mtendaji</span></h6>
-        <h6>Kwa: Waliounga mkono:  <span class="primary">8823</span></h6>
+        <h4 >{{petition.title}}</h4><hr>
+        <h6>{{petition.description}}</h6>
+        <!--<h6>Kwa: Afisa afya, Mwenyekiti,<span class="primary">Mtendaji</span></h6>-->
+        <!--<h6>Kwa: Waliounga mkono:  <span class="primary">8823</span></h6>-->
       </div>
     </div>
   </div>

@@ -8,12 +8,12 @@ import {Street} from '../../../../core/models/street';
   styleUrls: ['./ripoti-home.component.css']
 })
 export class RipotiHomeComponent implements OnInit {
-  street:Street;
-  position:any;
+  street: Street;
+  position: any;
 
-  constructor(private sessionService:SessionService) { }
+  constructor(private sessionService: SessionService) { }
 
-getData(){
+getData() {
 let data = this.sessionService.getCurrentUser();
 this.street = data.street;
 this.position = data.position;

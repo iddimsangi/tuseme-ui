@@ -1,20 +1,23 @@
-<div class="tarifa center" *ngIf="model">
-  <div class="row">
-    <div class="col-sm-9 mytext">
+<div class="container" *ngIf="model">
+
+  <div class="row page">
+    <div class="col-sm-12 mytext">
       <div class="maelezo">Ujumbe: {{model.body}} </div>
     </div>
   </div>
+  <div class="tarifa center" >
   <form>
-    <label for="category">Chagua kundi lakufikiwa na ujumbe </label>
-    <select id="category" name="category_id" [(ngModel)]="model.category_id">
-      <option *ngFor="let category of ujumbeCategories" [ngValue]="category.id">{{category.category_name}}</option>
-    </select>
+    <!--<label for="category">Chagua kundi lakufikiwa na ujumbe </label>-->
+    <!--<select id="category" name="category_id" [(ngModel)]="model.category_id">-->
+      <!--<option *ngFor="let category of ujumbeCategories" [ngValue]="category.id">{{category.category_name}}</option>-->
+    <!--</select>-->
     <fieldset>
       <textarea placeholder="Maelezo kwa urefu...." tabindex="5" required [(ngModel)]="model.body" name="body"></textarea>
     </fieldset>
-    <p><a (click)="update()" class="btn btn-primary">Rekebisha Ujumbe</a></p>
+    <p><a (click)="update()" class="btn btn-success pull-right">Rekebisha Ujumbe</a></p>
 
   </form>
+</div>
 </div>
 
 

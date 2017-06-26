@@ -10,10 +10,10 @@ import {User} from '../../core/models/user';
 })
 export class SideMenuComponent implements OnInit {
 
-  currentUser:any = this.sessionService.getCurrentUser();
-  user:User = this.currentUser.user;
+  currentUser: any = this.sessionService.getCurrentUser();
+  user: User = this.currentUser.user;
 
-  constructor(private router: Router,private sessionService:SessionService) { }
+  constructor(private router: Router, private sessionService: SessionService) { }
 
   logout(){
     this.router.navigateByUrl('/karibu');

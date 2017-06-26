@@ -1,14 +1,12 @@
 <div class="row">
-
   <div class="archive col-sm-1">
   </div>
-
   <div class=" ripoti col-sm-11">
-    <h3><em>Mlalakua</em></h3>
+    <h3><em>{{street.name}}</em></h3>
     <hr>
     <div class="seethroughbox"></div>
     <div class="row" *ngFor="let tangazo of matangazo">
-      <div class="col-sm-2 date">
+      <div class="col-sm-3 date">
         <h3>{{tangazo.position_name}}</h3><h6>{{tangazo.created_at}}</h6>
       </div>
       <div class="col-sm-9 mytext">

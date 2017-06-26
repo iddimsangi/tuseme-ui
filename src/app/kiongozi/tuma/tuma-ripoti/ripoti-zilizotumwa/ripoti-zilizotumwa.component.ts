@@ -11,27 +11,27 @@ import { User } from '../../../../core/models/user';
 })
 export class RipotiZilizotumwaComponent implements OnInit {
   reports: Report[];
-  user:User = this.sessionService.getCurrentUser().user;
+  user: User = this.sessionService.getCurrentUser().user;
 
-  constructor(private reportService: ReportService, private sessionService:SessionService) { }
+  constructor(private reportService: ReportService, private sessionService: SessionService) { }
 
-  getReports(id:number){
+  getReports(id: number) {
     this.reportService.getLeaderReports(id)
       .then(
         res => {
           console.info('reports retrived successfully');
           console.info(res);
-          this.reports =res;
+          this.reports = res;
         }
       );
   }
 
-  deleteReport(data:Report):void {
+  deleteReport(data: Report): void {
     this.reportService.deleteReport(data.id)
       .then(() => {
         this.reports = this.reports.filter(u => u !== data);
         console.log("Ujumbe deleted successfully");
-      })
+      });
   }
 
 

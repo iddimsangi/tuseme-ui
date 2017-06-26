@@ -1,4 +1,6 @@
-
+.col-sm-7{
+  word-wrap: break-word;
+}
 .pagetitle {
   font-size: 32px;
   margin-top: 105px;

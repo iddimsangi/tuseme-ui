@@ -1,7 +1,9 @@
 
-   .ripoti {
+   .ripoti.col-sm-11 {
        margin-top: 110px;
        width: 80%;
+     position: relative;
+     left: 5px;
    }
    hr {
        background-color: #820912;
@@ -16,3 +18,6 @@
      word-break:break-all;
      text-align: justify
    }
+.col-sm-9.mytext,.col-sm-3.date{
+  word-wrap: break-word;
+}

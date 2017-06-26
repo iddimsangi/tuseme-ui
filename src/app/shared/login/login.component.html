@@ -1,10 +1,10 @@
 <div class="form-group">
     <div ><span *ngFor="let see">{{s}}</span></div>
     <div class="col-lg-5">
-      <label><b>Phone Number</b></label>
+      <label><b>Namba ya simu</b></label>
       <input type="text" placeholder="Enter Username"  required
       [(ngModel)]="model.phone_number" name="phone_number">
-      <label><b>Password</b></label>
+      <label><b>Neno-siri</b></label>
       <input type="password" placeholder="Enter Password"  required
       [(ngModel)]="model.password">
       <button type="submit" class="btn btn-success" [disabled]="loading" (click)="login()">Login</button>

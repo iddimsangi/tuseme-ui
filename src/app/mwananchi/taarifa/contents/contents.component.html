@@ -5,7 +5,8 @@
     <h3><em>{{street.name}}</em></h3>
     <hr>
     <div class="seethroughbox"></div>
-    <div class="row" *ngFor="let tangazo of matangazo">
+    <div class="row">
+      <div class="card" *ngFor="let tangazo of matangazo">
       <div class="col-sm-3 date">
         <h3>{{tangazo.position_name}}</h3><h6>{{tangazo.created_at}}</h6>
       </div>
@@ -21,4 +22,5 @@
 
     </div>
   </div>
+</div>
 </div>

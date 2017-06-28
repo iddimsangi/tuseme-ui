@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Http } from '@angular/http';
+import {Http,Headers } from '@angular/http';
 import {Street } from './models/street';
 import 'rxjs/add/operator/toPromise';
 import {Url} from './models/url';
@@ -7,13 +7,28 @@ import {Url} from './models/url';
 @Injectable()
 export class StreetService {
 url = new Url();
+private headers = new Headers({'Content-Type':'application/json'});
+
 private streetUrl =`${this.url.onlineUrl}/${'streets'}`;
+private attachUrl =`${this.url.onlineUrl}/${'streetDetails'}`;
   constructor(private http:Http) { }
 
   getStreets():Promise<Street[]>{
     return this.http.get(this.streetUrl)
     .toPromise()
     .then(res=>res.json().data as Street[])
+    .catch(this.handleError);
+  }
+  attachStreet(data:any):Promise<any>{
+    return this.http.post(this.attachUrl,JSON.stringify(data),{headers:this.headers})
+    .toPromise()
+    .then(res=>res.json().data as any)
+    .catch(this.handleError);
+  }
+  createStreet(data:any):Promise<Street>{
+   return this.http.post(this.streetUrl,JSON.stringify(data),{headers:this.headers})
+    .toPromise()
+    .then(res=>res.json().data as Street)
     .catch(this.handleError);
   }
 

@@ -3,6 +3,7 @@ import {PetitionService} from '../../../core/petition.service';
 import {Petition} from '../../../core/models/petition';
 import { SessionService } from '../../../core/session.service';
 import { User } from '../../../core/models/user';
+import {Street} from "../../../core/models/street";
 
 @Component({
   selector: 'app-malalamiko-mapya',
@@ -10,26 +11,38 @@ import { User } from '../../../core/models/user';
   styleUrls: ['./malalamiko-mapya.component.css']
 })
 export class MalalamikoMapyaComponent implements OnInit {
-malalamiko:Petition[];
- user:User = this.sessionService.getCurrentUser().user;
- 
+malalamiko: Petition[];
+ user: User = this.sessionService.getCurrentUser().user;
+ street: Street;
+  constructor(private petitionService: PetitionService, private sessionService: SessionService) { }
 
-  constructor(private petitionService: PetitionService,private sessionService:SessionService) { }
-
-  getMalalamiko(id:number){
-    this.petitionService.getCitizenMalalamiko(id)
+  // getMalalamiko(id: number) {
+  //   this.petitionService.getStreetMalalamiko(id)
+  //     .then(
+  //       res => {
+  //         this.malalamiko = res;
+  //         console.log('can get malalamiko');
+  //         console.log(res);
+  //       }
+  //     );
+  // }
+  getMalalamiko(id: number) {
+    this.petitionService.getStreetMalalamiko(id)
       .then(
         res => {
           this.malalamiko = res;
-          console.log('can get malalamiko');
-          console.log(res);
         }
       );
   }
-
+/*the information of the street*/
+getInfo(){
+  let info = this.sessionService.getCurrentUser();
+ this.street = info.street;
+}
 
   ngOnInit() {
-    this.getMalalamiko(this.user.id);
+    this.getMalalamiko(this.user.street_id);
+    this.getInfo();
   }
 
 }

@@ -1,30 +1,30 @@
-<div class="container options">
-
-  <form>
+<div class="container options" >
+  <div class="tarifa center">
+    <img id="image" *ngIf="loading" src="assets/images/5.gif" >
+  <form id="contact" *ngIf="!loading">
     <label for="category">Chagua kundi la malalamiko yako </label>
     <select id="category" class="textfield" [(ngModel)]="model.petition_category_id" name="category_id">
       <option *ngFor="let category of petitionCategories" [ngValue]="category.id">{{category.name}}</option>
     </select>
     <br>
-    <textarea class="textfield" name="title" text=" Maelezo ya mada kwa ufupi" placeholder="     Maelezo ya mada kwa ufupi" cols="80" rows="1" [(ngModel)]="model.title"></textarea>
-    <br>
-    <textarea class="textfield" name="Mlengwa" placeholder="    Kinongozi Mlengwa" cols="80" rows="1"></textarea>
-    <br>
-    <textarea class="textarea" rows="3" cols="80"  placeholder="    Maelezo zaidi..." name="description" [(ngModel)]="model.description"></textarea>
-    <br>
-    <input type="radio" name="mass support" value="idadi"><em>  Nnahitaji uungwaji mkono kutoka kwa wananchi</em> <textarea class="idadi" name="Idadi" cols="10" rows="1">
-          Idadi
-      </textarea>
-
-    <button class="button" type="button" (click)="create()">Tuma Malalamiko</button>
+    <fieldset>
+          <input type="text" name="title" text=" Maelezo ya mada kwa ufupi" placeholder="Maelezo ya mada kwa ufupi" [(ngModel)]="model.title">
+        </fieldset>
+        &emsp;
+    &emsp;
+        <fieldset>
+          <textarea name="description" placeholder="Maelezo kwa urefu.." tabindex="5" required  [(ngModel)]="model.description"></textarea>
+        </fieldset>
+    <button class="btn btn-success pull-right" type="button"  (click)="create()">Tuma Malalamiko</button>
   </form>
+  </div>
 
   <div class="containermajor">
-    <div class="container petitions" *ngFor="let lalamiko of malalamiko">
-      <div >
-        <h3><strong>Afya</strong> Mlalakua</h3>
+    <div class="container petitions">
+        <h3><strong></strong>{{street.name}}</h3>
         <hr>
         <div class="seethroughbox"></div>
+        <div class="card" *ngFor="let lalamiko of malalamiko" >
         <div class="row">
           <div class="col-sm-2 date">
             <h6>{{lalamiko.created_at}}</h6>
@@ -32,8 +32,8 @@
           <div class="col-sm-9 mytext">
             <p>{{lalamiko.title}}</p>
             <div class="row">
-              <div class="col-sm-4 wadhifa">Kwa: Mwenyekiti Mlalakua</div>
-              <div class="col-sm-4 lengo">Wananchi walio afiki: <span id="idadi">1200</span>/<span id="lengo">3000</span></div>
+              <!--<div class="col-sm-4 wadhifa">Kwa: Mwenyekiti Mlalakua</div>-->
+              <!--<div class="col-sm-4 lengo">Wananchi walio afiki: <span id="idadi">1200</span>/<span id="lengo">3000</span></div>-->
               <div class="col-sm-4">
                 <div id="progressbar">
                   <div id="barfill"></div>
@@ -46,8 +46,8 @@
 
             <br><br><br><br><br>
             <br>
-            <button class="default" type="button" [routerLink]="['/mwananchi/dua/rekebisha',lalamiko.id]"> Rekebisha </button>
-            <button class="default" type="button" (click)="deleteLalamiko(lalamiko); $event.stopPropagation()" > Ondoa </button>
+            <button class="btn btn-success pull-right" type="button" [routerLink]="['/mwananchi/dua/rekebisha',lalamiko.id]"> Rekebisha </button>
+            <button class="btn btn-success pull-right" type="button" (click)="deleteLalamiko(lalamiko); $event.stopPropagation()" > Ondoa </button>
           </div>
         </div>
       </div>

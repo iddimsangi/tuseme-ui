@@ -1,9 +1,10 @@
 <div class="containermajor">
   <div class="container petitions">
-    <div *ngFor="let lalamiko of malalamiko">
-    <h3><strong>Afya</strong> Mlalakua</h3>
+    <h3><strong>Afya</strong> {{street.name}}</h3>
     <hr>
+
     <div class="seethroughbox"></div>
+    <div class="card" *ngFor="let lalamiko of malalamiko" >
     <div class="row">
       <div class="col-sm-2 date">
         <h6>{{lalamiko.created_at}}</h6>
@@ -11,8 +12,8 @@
       <div class="col-sm-9 mytext">
         <p>{{lalamiko.title}}</p>
         <div class="row">
-          <div class="col-sm-4 wadhifa">Kwa: Mwenyekiti Mlalakua</div>
-          <div class="col-sm-4 lengo">Wananchi walio afiki: <span id="idadi">1200</span>/<span id="lengo">3000</span></div>
+          <!--<div class="col-sm-4 wadhifa">Kwa: Mwenyekiti Mlalakua</div>-->
+          <!--<div class="col-sm-4 lengo">Wananchi walio afiki: <span id="idadi">1200</span>/<span id="lengo">3000</span></div>-->
           <div class="col-sm-4">
             <div id="progressbar">
               <div id="barfill"></div>
@@ -25,7 +26,7 @@
 
         <br><br><br><br><br>
         <br>
-        <button class="default" type="button" onclick="incrementi()"> Ninaafiki Mada </button>
+        <!--<button class="default" type="button" onclick="incrementi()"> Ninaafiki Mada </button>-->
       </div>
     </div>
     </div>

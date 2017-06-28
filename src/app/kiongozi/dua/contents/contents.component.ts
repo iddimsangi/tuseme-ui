@@ -17,9 +17,9 @@ malalamiko: Petition[];
   street: Street;
   position: any;
 
-  constructor(private petitonService: PetitionService, private sessionService: SessionService) { }
+  constructor(private petitionService: PetitionService, private sessionService: SessionService) { }
 getMalalamiko(id: number) {
-    this.petitonService.getStreetMalalamiko(id)
+    this.petitionService.getStreetMalalamiko(id)
       .then(
         res => {
           this.malalamiko = res;

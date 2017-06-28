@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../../core/auth.service";
 import {Router} from "@angular/router";
 import {SessionService} from "../../core/session.service";
+import { AdminService } from '../../core/admin.service';
 
 @Component({
   selector: 'app-login',
@@ -15,9 +16,14 @@ export class LoginComponent implements OnInit {
     "password": ''
   };
   loading = false;
+  message:string;
 
-  constructor(private authService: AuthService, private router: Router, private sessionService: SessionService
-) { }
+  constructor(
+              private authService: AuthService,
+               private router: Router,
+                private sessionService: SessionService,
+                private adminService:AdminService
+              ) { }
 
   login() {
     this.loading = true;
@@ -33,13 +39,25 @@ export class LoginComponent implements OnInit {
             }
         },
         error => {
-          console.error(error);
-          this.loading = false;
+          //try to login admin
+          this.loginAdmin(this.model);
         }
       );
   }
+  loginAdmin(data:any){
+      this.adminService.login(data)
+      .then(res=>{
+        console.log('admin has loged in successfully');
+        console.log(res);
+        this.router.navigateByUrl('/admin');
+      }, error=>{
+        console.log('an error has occured');
+        console.log(error);
+        this.loading = false;
+        this.message = 'umekosea! jaribu tena kwa namba ya simu na neno siri sahihi';
+      });
+  }
   ngOnInit() {
-
   }
 
 

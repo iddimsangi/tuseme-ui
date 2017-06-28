@@ -13,6 +13,7 @@ import {PositionService} from './position.service';
 import {LeaderService} from './leader.service';
 import { SessionService } from './session.service';
 import {StreetService } from './street.service';
+import { AdminService } from './admin.service';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import {StreetService } from './street.service';
     PositionService,
     LeaderService,
     SessionService,
-    StreetService
+    StreetService,
+    AdminService
   ]
 })
 export class CoreModule { }

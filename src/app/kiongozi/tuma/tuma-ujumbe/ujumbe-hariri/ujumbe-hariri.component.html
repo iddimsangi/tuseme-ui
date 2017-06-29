@@ -2,7 +2,10 @@
 
   <div class="row page">
     <div class="col-sm-12 mytext">
-      <div class="maelezo">Ujumbe: {{model.body}} </div>
+      <div class="maelezo"><strong>utangulizi: </strong>{{model.title}} </div>
+    </div>
+    <div class="col-sm-12 mytext">
+      <div class="maelezo"><strong>Tangazo: </strong> {{model.body}} </div>
     </div>
   </div>
   <div class="tarifa center" >
@@ -12,9 +15,12 @@
       <!--<option *ngFor="let category of ujumbeCategories" [ngValue]="category.id">{{category.category_name}}</option>-->
     <!--</select>-->
     <fieldset>
+        <input type="text" name="title" placeholder="Utangulizi wa Tangazo" [(ngModel)]="model.title">
+      </fieldset>
+    <fieldset>
       <textarea placeholder="Maelezo kwa urefu...." tabindex="5" required [(ngModel)]="model.body" name="body"></textarea>
     </fieldset>
-    <p><a (click)="update()" class="btn btn-success pull-right">Rekebisha Ujumbe</a></p>
+    <p><a (click)="update()" class="btn btn-success pull-right">Rekebisha Tangazo</a></p>
 
   </form>
 </div>

@@ -14,7 +14,7 @@ export class AndikaUjumbeComponent implements OnInit {
 
   ujumbeCategory:UjumbeCategory[];
   model:any ={
-    "title": "string",
+    "title": "",
     "body": "",
     "user_id": 1,
      "street_id":"1",

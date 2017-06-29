@@ -16,8 +16,9 @@
      <h3><em>Mlalakua</em></h3>
    <hr>
    <div class="seethroughbox"></div>
-   <div class="row" *ngFor="let report of reports">
-     <div class="col-sm-2 date">
+   <div class="card" *ngFor="let report of reports">
+   <div class="row">
+     <div class="col-sm-3 date">
        <h3>{{report.position_name}}</h3><h6>{{report.created_at}}</h6>
      </div>
      <div class="col-sm-9 mytext">
@@ -33,5 +34,6 @@
        </div>
      </div>
      </div>
+   </div>
    </div>
    </div>

@@ -144,7 +144,7 @@ fieldset input[type=text], select {
 
   }
 }
-.col-sm-2.date,.maelezo,.col-sm-9.mytext{
+.col-sm-3.date,.maelezo,.col-sm-9.mytext{
   word-wrap: break-word;
 
 }

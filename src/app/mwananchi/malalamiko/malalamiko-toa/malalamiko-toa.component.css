@@ -1,3 +1,4 @@
+/*
 
 .textfield {
   margin-bottom: 19px;
@@ -367,3 +368,132 @@ hr {
   margin-top: 40px;
 }
 
+*/
+
+.textfield {
+  margin-bottom: 19px;
+  border-color: burlywood;
+  border-radius: 3px;
+}
+
+.textarea {
+  margin-bottom: 20px;
+  border-color: burlywood;
+  border-radius: 3px;
+}
+
+.idadi {
+  margin-left: 10px;
+  color: cadetblue;
+  border-radius: 2px;
+}
+
+.button {
+  font-size: 18px;
+  color: #ffffff;
+  width: 110px;
+  height: 40px;
+  padding-top: 6px;
+  margin-left: 300px;
+  background-image: url(/assets/images/send-button-strip-m.jpg);
+  background-repeat: repeat-x;
+  border-radius: 5px;
+}
+
+
+
+.pagetitle {
+  font-size: 32px;
+  margin-top: 105px;
+}
+
+
+.text {
+  margin-top: 45px;
+  padding-left: 19px;
+  text-align: left;
+  width: 70%;
+  border-left: thick solid burlywood;
+}
+
+hr {
+  background-color: #820912;
+  height: 2px;
+  margin-top: 5px;
+}
+
+.btn-round {
+  background-color: #008080;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.btn.btn-success{
+  background-color:#008080;
+  border-color:#008080 ;
+  color: white;
+
+
+}
+.tuma.row{
+  margin-top: 90px;
+}
+.ldr.col-sm-11.col-md-11.col-lg-11{
+  border-bottom: 2px solid #f25841;
+
+}
+.leader.col-sm-1.col-md-1.col-lg-1{
+  padding-left: 30px;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #F5F5DC;
+  resize: none;
+}
+
+fieldset input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #F5F5DC;
+}
+
+.glyphicon.glyphicon-menu-left {
+  color:white;
+}
+#image{
+  position: absolute;
+  left: 600px;
+}
+@media(min-width:760px) {
+  .tarifa-center {
+    top: 51px;
+    border: none;
+    border-radius: 0;
+
+  }
+
+  .tarifa.center {
+    margin: auto;
+    width: 760px;
+    border: 3px solid #F5F5DC;
+    padding: 70px;
+    background-color: #F5F5DC;
+    margin-top: 4px;
+
+  }
+}
+.col-sm-12.mytext{
+  word-wrap: break-word;
+  margin-bottom: 4px;
+}

@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../../../css/sb-admin.css','../../../css/plugins/morris.css','./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
-  constructor() { }
+ 
+  constructor( ) { }
 
   ngOnInit() {
   }

@@ -32,6 +32,14 @@ export class AuthService {
       .catch(this.handleError);
   }
 
+getUsers():Promise<any[]>{
+  return this.http.get(this.registerUrl)
+  .toPromise()
+  .then(res => res.json().data as any[])
+  .catch(this.handleError)
+
+}
+
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only

@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
       this.adminService.login(data)
       .then(res=>{
         console.log('admin has loged in successfully');
-        console.log(res);
+        this.sessionService.setCurrentUser(res);
         this.router.navigateByUrl('/admin');
       }, error=>{
         console.log('an error has occured');

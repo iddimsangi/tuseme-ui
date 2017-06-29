@@ -1,10 +1,11 @@
 <div class="containermajor">
   <div class="container petitions">
-    <h3><strong>Afya</strong> {{street.name}}</h3>
-    <hr>
+    
 
     <div class="seethroughbox"></div>
     <div class="card" *ngFor="let lalamiko of malalamiko" >
+      <h3><strong>{{lalamiko.category_name}}</strong> </h3>
+    <hr>
     <div class="row">
       <div class="col-sm-2 date">
         <h6>{{lalamiko.created_at}}</h6>

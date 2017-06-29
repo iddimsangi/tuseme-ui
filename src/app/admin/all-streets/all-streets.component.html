@@ -1,4 +1,4 @@
-<div id="page-wrapper">
+  <div id="page-wrapper">
 
             <div class="container-fluid">
 
@@ -6,14 +6,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Watumiaji wa SMARTMTAA
+                            Mitaa
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-table"></i> Watumiaji
+                                <i class="fa fa-edit"></i> Mitaa
                             </li>
                         </ol>
                     </div>
@@ -22,31 +22,33 @@
 
                 <div class="row">
                     <div class="col-lg-12">
+                        <h2>Mitaa Yote</h2>
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
                                         <th>Jina</th>
-                                        <th>namba ya Simu</th>
-                                        <th>wadhifa</th>
+                                        <th>Kata</th>
+                                        <th>Manispaa</th>
+                                        <th>Jiji</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr *ngFor="let mwanachi of users">
-                                        <td>{{mwanachi.first_name}}</td>
-                                      <td>{{mwanachi.phone_number}}</td>
-                                        <td>{{mwanachi.role}}</td>
+                                    <tr *ngFor="let street of streets">
+                                        <td>{{street.name}}</td>
+                                        <td>{{street.ward}}</td>
+                                        <td>{{street.municipal}}</td>
+                                        <td>{{street.city}}</td>
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
+                      
+                   
+                   
+                </div>
+
                     </div>
                 </div>
-                <!-- /.row -->
-
-                <!-- /.row -->
-
-             
                 <!-- /.row -->
 
             </div>

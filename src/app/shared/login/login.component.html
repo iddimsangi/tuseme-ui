@@ -1,15 +1,24 @@
-<div class="form-group">
-<div *ngIf="message"><h5 style="color:red">{{message}}</h5></div>
-    <div ><span *ngFor="let see">{{s}}</span></div>
-    <div class="col-lg-5">
-      <label><b>Namba ya simu</b></label>
-      <input type="text" placeholder="ingiza namba ya simu"  required
-      [(ngModel)]="model.phone_number" name="phone_number">
-      <label><b>Neno-siri</b></label>
-      <input type="password" placeholder="ingiza neno-siri"  required
-      [(ngModel)]="model.password">
+<div class="card">
+  <div class="panel panel-success ">
+    <div class="panel-heading" style="text-align: center">Karibu smartMtaa <br>
+      <h4 style="text-align: center">Ingia</h4>
+    </div>
+    <div class="panel-body">
+      <div *ngIf="message"><h5 style="color:red">{{message}}</h5></div>
+      <div ><span *ngFor="let see">{{s}}</span></div>
+      <div class="form-group">
+        <label><b>Namba ya simu:</b></label>
+        <input type="text" placeholder="ingiza namba ya simu"  required
+               [(ngModel)]="model.phone_number" name="phone_number">
+      </div>
+      <div class="form-group">
+        <label><b>Neno-siri:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+        <input type="password" placeholder="ingiza neno-siri"  required
+               [(ngModel)]="model.password">
+      </div>
       <button [disabled]="loading" type="submit" class="btn btn-success"  (click)="login()">Ingia</button>
       <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
 
     </div>
   </div>
+</div>

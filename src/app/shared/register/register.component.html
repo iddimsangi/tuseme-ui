@@ -1,5 +1,10 @@
-
-<div class="form-group">
+<div class="card">
+  <div class="panel panel-success ">
+    <div class="panel-heading">
+      <h5 >Tafadhali jaza fomu hii endapo wewe mkazi wa mtaa fulani</h5>
+    </div>
+    <div class="panel-body">
+    <div class="form-group">
   <label for="first_name">Jina la kwanza</label>
   <input type="text" class="form-control" id="first_name"
          required
@@ -12,7 +17,7 @@
          [(ngModel)]="model.surname" name="surname">
 </div>
 <div class="form-group">
-  <label for="phone_number">Namba ya sim</label>
+  <label for="phone_number">Namba ya simu</label>
   <input type="text"  class="form-control" id="phone_number"
          [(ngModel)]="model.phone_number" name="phone_number">
 </div>
@@ -55,8 +60,11 @@
   <label for="confirm"> Rudia Neno siri</label>
   <input type="password"  class="form-control" id="confirm">
 </div>
-
-<button [disabled]="loading" type="button" class="btn btn-default" (click)="register()">Sajili</button>
+<div>
+<button [disabled]="loading" type="button" class="btn btn-success"  (click)="register()">Sajili</button>
+</div>
 <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
 <h5>je ushawahi jisajili smartmtaa?<a routerLink="/karibu/mwanzo/ingia"> bonyeza hapa kuingia</a></h5>
-
+    </div>
+  </div>
+</div>

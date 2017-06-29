@@ -5,18 +5,10 @@
 <!--    All rights reserved    -->
 <nav role="navigation">
   <div id="menuToggle">
-    <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
+  
     <input type="checkbox"/>
 
-    <!--
-    Some spans to act as a hamburger.
-
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
+   
     <span></span>
     <span></span>
     <span></span>
@@ -25,11 +17,15 @@
     Too bad the menu has to be inside of the button
     but hey, it's pure CSS magic.
     -->
-    <ul id="menu">
-      <li>Welcome {{user.first_name}} {{user.surname}}</li>
-      <li routerLink="/karibu/mwanzo/ingia">
-        <a (click)="logout()">jiondoe</a>
-      </li>
-    </ul>
+
+                <ul id="menu">
+                        <li *ngIf="user">
+                            <a ><i class="fa fa-fw fa-user"> {{user.first_name}}</i></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a routerLink="/karibu/mwanzo/ingia"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
   </div>
 </nav>

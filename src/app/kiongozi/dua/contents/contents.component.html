@@ -5,11 +5,9 @@
     <h4><span style=" font-weight: bold;">{{position.position_name}}</span> Mtaa wa{{street.name}}  <span style="float:right;"><small style=" font-weight: bold;"> Malalamiko ya wananchi</small></span></h4>
            <hr>
          </div>
-    <div class="seethroughbox"></div>
-
-    <!--bella start-->
-
-    <div class="container" *ngFor="let petition of malalamiko">
+           <div class="seethroughbox"></div>
+    <div class="card" *ngFor="let petition of malalamiko">
+      <div class="row">
       <div  class="col-sm-3 ">
         <h4 style=" font-weight: bold;margin-left:30px;">{{petition.category_name}}</h4>
         <div style=" width:20px;
@@ -24,4 +22,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

@@ -93,17 +93,6 @@ textarea {
   resize: none;
 }
 
-fieldset input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  background-color: #F5F5DC;
-}
-
 .glyphicon.glyphicon-menu-left {
   color:white;
 }

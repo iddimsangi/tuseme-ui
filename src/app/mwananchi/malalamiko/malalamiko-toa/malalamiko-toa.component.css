@@ -1,4 +1,4 @@
-/*
+
 
 .textfield {
   margin-bottom: 19px;
@@ -356,19 +356,8 @@ hr {
   margin-top: 5px;
 }
 
-.bgfooter{
-  background-color: #ffffff;
-  margin-top: 0px;
-}
 
-.socioicion {
-  height: 45px;
-  margin-left: 105px;
-  margin-right: 120px;
-  margin-top: 40px;
-}
 
-*/
 
 .textfield {
   margin-bottom: 19px;
@@ -496,4 +485,17 @@ fieldset input[type=text], select {
 .col-sm-12.mytext{
   word-wrap: break-word;
   margin-bottom: 4px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
 }

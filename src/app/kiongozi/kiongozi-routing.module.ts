@@ -10,6 +10,7 @@ const routes: Routes = [
      { path: '',   redirectTo: 'tuma', pathMatch: 'full' },
      { path: 'tuma', loadChildren: './tuma/tuma.module#TumaModule'},
      { path: 'dua', loadChildren:'./dua/dua.module#DuaModule' },
+     {path:'uratibu',loadChildren:'./uratibu/uratibu.module#UratibuModule'},
      { path: 'marejesho', loadChildren:'./marejesho/marejesho.module#MarejeshoModule' }
    ]
   }

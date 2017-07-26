@@ -1,5 +1,19 @@
 <div id="search-component">
-  <h4>Tafuta Mtaa wako</h4>
+<input type="text" [(ngModel)]="term">
+    <div style="max-height:100px; overflow:auto">
+        
+            <div *ngFor = "let item of items |filter:term" (click)="gotoStreetDetail(item)">
+                <p>
+                  {{item.name}}
+                </p>
+            </div>
+    </div>
+    <div style="position:absolute; left:85%; bottom:80%">
+       <button><a routerLink="/karibu/mwanzo/ingia">Ingia</a></button>
+     </div> 
+
+
+  <!--<h4>Tafuta Mtaa wako</h4>
   <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
   <div>
    <div *ngFor=" let street of results | async"
@@ -9,5 +23,5 @@
      <div style="position:absolute; left:85%; top:100%">
        <button><a routerLink="/karibu/mwanzo/ingia">Ingia</a></button>
      </div>
-  </div>
+  </div>-->
 </div>

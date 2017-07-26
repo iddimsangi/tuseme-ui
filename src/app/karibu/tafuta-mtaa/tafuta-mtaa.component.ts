@@ -21,6 +21,8 @@ import 'rxjs/add/operator/switchMap';
   styleUrls: ['./tafuta-mtaa.component.css']
 })
 export class TafutaMtaaComponent implements OnInit {
+  term:any = "";
+  items:Street[] =[]
   results:Observable<Street[]>;
   private searchTerms = new Subject<string>();
 
@@ -53,6 +55,13 @@ export class TafutaMtaaComponent implements OnInit {
         console.log(error);
         return Observable.of<Street[]>([]);
       });
+
+      this.streetService.getStreets()
+      .then(res =>{
+        this.items =res;
+        console.log('streets for search: '+ this.items);
+      })
+
   }
 
 }

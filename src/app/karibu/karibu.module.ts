@@ -9,12 +9,15 @@ import {FormsModule} from "@angular/forms";
 import { MwanzoComponent } from './mwanzo/mwanzo.component';
 import { KuhusuComponent } from './kuhusu/kuhusu.component';
 import { TafutaMtaaComponent } from './tafuta-mtaa/tafuta-mtaa.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     SharedModule,
     Angular2FontAwesomeModule,
+    Ng2SearchPipeModule,
     KaribuRoutingModule
 
   ],

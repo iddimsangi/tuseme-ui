@@ -9,12 +9,12 @@ import {Street} from "../../../core/models/street";
   styleUrls: ['./malalamiko-home.component.css']
 })
 export class MalalamikoHomeComponent implements OnInit {
-  user: User = this.sessionService.getCurrentUser().user;
+  user: any = this.sessionService.getCurrentUser();
   street: Street;
   constructor(private  sessionService: SessionService) { }
   getData(): void{
     let data = this.sessionService.getCurrentUser();
-    this.street = data.street;
+    this.street = data;
   }
   ngOnInit() {
     this.getData();

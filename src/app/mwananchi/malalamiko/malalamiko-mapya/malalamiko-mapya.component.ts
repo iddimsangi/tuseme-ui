@@ -12,7 +12,7 @@ import {Street} from "../../../core/models/street";
 })
 export class MalalamikoMapyaComponent implements OnInit {
 malalamiko: Petition[];
- user: User = this.sessionService.getCurrentUser().user;
+ user: User = this.sessionService.getCurrentUser();
  street: Street;
   constructor(private petitionService: PetitionService, private sessionService: SessionService) { }
 
@@ -37,11 +37,11 @@ malalamiko: Petition[];
 /*the information of the street*/
 getInfo(){
   let info = this.sessionService.getCurrentUser();
- this.street = info.street;
+ this.street = info;
 }
 
   ngOnInit() {
-    this.getMalalamiko(this.user.street_id);
+    this.getMalalamiko(this.user.id);
     this.getInfo();
   }
 

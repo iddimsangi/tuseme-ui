@@ -8,6 +8,7 @@ import {RegisterComponent} from '../shared/register/register.component';
 import {MwanzoComponent} from './mwanzo/mwanzo.component';
 import {RegisterLeaderComponent} from '../shared/register-leader/register-leader.component';
 import {KuhusuComponent} from './kuhusu/kuhusu.component';
+import {TafutaMtaaComponent } from './tafuta-mtaa/tafuta-mtaa.component';
 
 
 const routes: Routes = [
@@ -16,10 +17,11 @@ const routes: Routes = [
        {path:'',redirectTo:'mwanzo',pathMatch:'full'},
        {path:'mwanzo', component:MwanzoComponent,
        children:[
-         {path:'', redirectTo:'ingia',pathMatch:'full'},
+         {path:'', redirectTo:'tafuta-mtaa',pathMatch:'full'},
          {path:'ingia',component:LoginComponent},
          {path:'jisajili-mwananchi',component:RegisterComponent},
-         {path:'jisajili-kiongozi',component:RegisterLeaderComponent}
+         {path:'jisajili-kiongozi',component:RegisterLeaderComponent},
+         {path:'tafuta-mtaa', component: TafutaMtaaComponent}
        ]
        },
        {path:'kuhusu', component:KuhusuComponent},

@@ -1,0 +1,13 @@
+<div id="search-component">
+  <h4>Tafuta Mtaa wako</h4>
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+  <div>
+   <div *ngFor=" let street of results | async"
+      (click)="gotoStreetDetail(street)" class="search-result" >
+        {{street.name}}
+     </div>
+     <div style="position:absolute; left:85%; top:100%">
+       <button><a routerLink="/karibu/mwanzo/ingia">Ingia</a></button>
+     </div>
+  </div>
+</div>

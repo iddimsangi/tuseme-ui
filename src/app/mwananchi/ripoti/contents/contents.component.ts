@@ -12,7 +12,7 @@ import {Street} from "../../../core/models/street";
 })
 export class ContentsComponent implements OnInit {
 reports: Report[];
-user: User = this.sessionService.getCurrentUser().user;
+user: User = this.sessionService.getCurrentUser();
 street: Street;
 position: any;
   constructor(private ripotiservice: ReportService, private sessionService: SessionService) { }
@@ -29,11 +29,11 @@ position: any;
   }
 getInfo() {
     let info = this.sessionService.getCurrentUser();
-    this.street = info.street;
-    this.position = info.position;
+    this.street =info;
+    this.position = info.id;
 }
   ngOnInit() {
-    this.getReports(this.user.street_id);
+    this.getReports(this.user.id);
     this.getInfo();
   }
 

@@ -10,7 +10,7 @@ import {SessionService} from "../../core/session.service";
 })
 export class SideMenuComponent implements OnInit {
 
-  user: User = this.sessionService.getCurrentUser().user;
+  user: User = this.sessionService.getCurrentUser();
   constructor(private router: Router, private sessionService: SessionService) { }
 
   logout(){

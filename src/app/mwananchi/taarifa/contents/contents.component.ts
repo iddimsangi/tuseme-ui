@@ -12,7 +12,7 @@ import {Street} from "../../../core/models/street";
 })
 export class ContentsComponent implements OnInit {
 matangazo: Ujumbe[];
-  user: User = this.sessionService.getCurrentUser().user;
+  user: any = this.sessionService.getCurrentUser();
   street: Street;
   position: any;
   constructor(private ujumbeService: UjumbeService, private sessionService: SessionService) {
@@ -30,11 +30,11 @@ matangazo: Ujumbe[];
   }
   getValue() {
     const value = this.sessionService.getCurrentUser();
-    this.street = value.street;
-    this.position = value.position;
+    this.street = value;
+    this.position = value.name;
   }
   ngOnInit() {
-    this.getMatangazo(this.user.street_id);
+    this.getMatangazo(this.user.id);
     this.getValue();
   }
 

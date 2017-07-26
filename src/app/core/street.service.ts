@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import {Http,Headers } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 import {Street } from './models/street';
 import 'rxjs/add/operator/toPromise';
+import 'rxjs/add/operator/map';
 import {Url} from './models/url';
 
 @Injectable()
@@ -35,6 +37,12 @@ private attachUrl =`${this.url.onlineUrl}/${'streetDetails'}`;
     private handleError(error: any) :Promise<any>{
     console.info('an error has occured');
     return Promise.reject(error.messege || error)
+  }
+
+  search(term:string):Observable<Street[]>{
+    const  url = `${this.url.onlineUrl}/${'search'}/?=${term}`
+    return this.http.get(url)
+    .map(res => res.json().data as Street[])
   }
 
 }

@@ -8,6 +8,7 @@ import {SharedModule} from "../shared/shared.module";
 import {FormsModule} from "@angular/forms";
 import { MwanzoComponent } from './mwanzo/mwanzo.component';
 import { KuhusuComponent } from './kuhusu/kuhusu.component';
+import { TafutaMtaaComponent } from './tafuta-mtaa/tafuta-mtaa.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -17,6 +18,6 @@ import { KuhusuComponent } from './kuhusu/kuhusu.component';
     KaribuRoutingModule
 
   ],
-  declarations: [AppComponent, KaribuFooterComponent, MwanzoComponent, KuhusuComponent]
+  declarations: [AppComponent, KaribuFooterComponent, MwanzoComponent, KuhusuComponent, TafutaMtaaComponent]
 })
 export class KaribuModule { }
